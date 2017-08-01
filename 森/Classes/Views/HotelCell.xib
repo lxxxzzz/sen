@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="KGk-i7-Jjw" customClass="HotelCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WCI-MT-SA0">
+                        <rect key="frame" x="15" y="14.5" width="100" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="EV1-9j-BLH"/>
+                            <constraint firstAttribute="width" constant="100" id="Y6O-Wm-hQ0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-bf-Z11">
+                        <rect key="frame" x="131" y="14.5" width="43" height="24"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKp-vz-1Zo">
+                        <rect key="frame" x="131" y="60" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YKp-vz-1Zo" firstAttribute="leading" secondItem="bIV-bf-Z11" secondAttribute="leading" id="2Hy-fY-RXw"/>
+                    <constraint firstItem="WCI-MT-SA0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AXY-mz-fiv"/>
+                    <constraint firstItem="bIV-bf-Z11" firstAttribute="leading" secondItem="WCI-MT-SA0" secondAttribute="trailing" constant="16" id="Uuc-Gn-xVN"/>
+                    <constraint firstItem="bIV-bf-Z11" firstAttribute="top" secondItem="WCI-MT-SA0" secondAttribute="top" id="eri-SX-ZRn"/>
+                    <constraint firstItem="YKp-vz-1Zo" firstAttribute="bottom" secondItem="WCI-MT-SA0" secondAttribute="bottom" id="fZw-YO-zIy"/>
+                    <constraint firstItem="WCI-MT-SA0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="z2H-T5-n3t"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="WCI-MT-SA0" id="ZH6-If-M7X"/>
+                <outlet property="infoLabel" destination="YKp-vz-1Zo" id="Gfr-rn-nOQ"/>
+                <outlet property="nameLabel" destination="bIV-bf-Z11" id="9BR-n5-OYY"/>
+            </connections>
+            <point key="canvasLocation" x="-194" y="5"/>
+        </tableViewCell>
+    </objects>
+</document>
