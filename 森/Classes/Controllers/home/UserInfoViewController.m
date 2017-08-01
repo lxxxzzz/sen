@@ -46,13 +46,13 @@
     [self setupNavigationItem];
     
     [self setupSubviews];
+    
+    [self loadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
-    [self loadData];
 }
 
 #pragma mark - Override
@@ -289,6 +289,9 @@
         self.group1.subHeader = @"设定收款账号";
         self.group1.subHeaderAction = ^{
             BindingAccountViewController *bindingVc = [[BindingAccountViewController alloc] init];
+            bindingVc.bindVCDidPop = ^{
+                [weakSelf loadData];
+            };
             [weakSelf.navigationController pushViewController:bindingVc animated:YES];
         };
 //        self.group1.items = @[self.accountItem];

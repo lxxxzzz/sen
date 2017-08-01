@@ -275,20 +275,6 @@
             
             [[NSNotificationCenter defaultCenter] postNotificationName:kUserDidLoginNotification object:nil];
             
-//            if (user.user_type == 3 || user.user_type == 4) {
-//                // 只有注册账号和酒店账号才需要绑定支付宝账号
-//                if (user.alipay_account != nil || user.bank_account != nil || [user.alipay_account isEqualToString:@""] || ![user.bank_account isEqualToString:@""]) {
-//                    // 绑定过账号
-//                    [RootVCManager rootVc];
-//
-//                } else {
-//                    // 没绑定过，跳转到绑定页面
-//                    [RootVCManager bindingAccount:YES];
-//                }
-//            } else {
-//                [RootVCManager rootVc];
-//            }
-            
             if ((user.alipay_account && user.alipay_account.length) || (user.bank_account && user.bank_account.length)) {
                 // 有设定过支付信息，到酒店列表
                 [RootVCManager rootVc];

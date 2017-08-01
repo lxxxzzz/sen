@@ -11,5 +11,6 @@
 @interface BindingAccountViewController : UIViewController
 
 @property (nonatomic, assign, getter=isFirst) BOOL first;
+@property (nonatomic, copy) void(^bindVCDidPop)();
 
 @end

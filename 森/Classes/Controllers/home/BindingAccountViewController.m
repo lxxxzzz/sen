@@ -20,6 +20,7 @@
 #import "ArrowItem.h"
 #import "Option.h"
 #import "KeyboardView.h"
+#import "UIBarButtonItem+Extension.h"
 
 #import <SVProgressHUD.h>
 #import <Masonry.h>
@@ -68,14 +69,24 @@
 }
 
 #pragma mark - 私有方法
+- (void)back {
+    if (self.bindVCDidPop) {
+        self.bindVCDidPop();
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)setupNavigationItem {
     self.navigationItem.title = @"设定个人信息";
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"icons_back_white" highImageName:@"icons_back_white" target:self action:@selector(back)];
+    
     if (self.isFirst) {
         self.rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"下一步" style:UIBarButtonItemStyleDone target:self action:@selector(next)];
     } else {
         self.rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(save)];
     }
-
+    
     [self.rightButtonItem setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateDisabled];
     
     self.rightButtonItem.enabled = NO;
@@ -376,7 +387,7 @@
                     // 银行卡账号
                     group1.items = @[weakAccountTypeItem, weakSelf.bankItem, weakSelf.userNameItem, weakSelf.accountItem];
                 }
-                // 
+                //
                 [weakSelf checkStatus];
                 [weakSelf.tableView reloadData];
             };
@@ -420,3 +431,4 @@
 }
 
 @end
+
