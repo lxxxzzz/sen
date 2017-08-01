@@ -40,6 +40,14 @@ static NSInteger kMaxHistryKeywordsCount = 10;
     [self setupSubviews];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    Log(@"token ---- %@",TOKEN);
+}
+
 - (void)searchWithKeyword:(NSString *)keyword {
     __weak typeof(self) weakself = self;
     NSString *url = [NSString stringWithFormat:@"%@?m=app&c=user&f=mainList", HOST];

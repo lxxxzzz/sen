@@ -1280,12 +1280,12 @@
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lee/Documents/Code/sen-master/%E6%A3%AE/Classes/Controllers/provider/InputCustomerViewController.m"
-                  timestampString = "523292974.626777"
+                  timestampString = "523295487.615493"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
                   endingLineNumber = "125"
-                  offsetFromSymbolStart = "1107">
+                  offsetFromSymbolStart = "1084">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1295,12 +1295,12 @@
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lee/Documents/Code/sen-master/%E6%A3%AE/Classes/Controllers/provider/InputCustomerViewController.m"
-                  timestampString = "523292974.62886"
+                  timestampString = "523295487.616851"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "127"
                   endingLineNumber = "127"
-                  offsetFromSymbolStart = "32">
+                  offsetFromSymbolStart = "36">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1568,12 +1568,12 @@
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lee/Documents/Code/sen-master/%E6%A3%AE/Classes/Controllers/dajian/DJSignViewController.m"
-                  timestampString = "523292974.639425"
+                  timestampString = "523295487.624163"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "231"
                   endingLineNumber = "231"
-                  offsetFromSymbolStart = "335">
+                  offsetFromSymbolStart = "352">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1583,12 +1583,12 @@
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lee/Documents/Code/sen-master/%E6%A3%AE/Classes/Controllers/dajian/DJSignViewController.m"
-                  timestampString = "523292974.641898"
+                  timestampString = "523295487.625675"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "233"
                   endingLineNumber = "233"
-                  offsetFromSymbolStart = "32">
+                  offsetFromSymbolStart = "52">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1792,11 +1792,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/SearchViewController.m"
-            timestampString = "523102027.289552"
+            timestampString = "523295487.554175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "-searchBarSearchButtonClicked:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1808,11 +1808,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/SearchViewController.m"
-            timestampString = "523102027.28962"
+            timestampString = "523295487.554254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "-historyKeywords"
             landmarkType = "7">
          </BreakpointContent>
@@ -2000,12 +2000,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/LoginViewController.m"
-            timestampString = "523292974.607569"
+            timestampString = "523295487.554383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "241"
             endingLineNumber = "241"
             landmarkName = "-providerLogin"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Controllers/home/UserInfoViewController.m"
+            timestampString = "523295487.554439"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
+            landmarkName = "-dataSource"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Controllers/home/BindingAccountViewController.m"
+            timestampString = "523295487.554497"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-back"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
