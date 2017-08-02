@@ -241,7 +241,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/provider/CustomerListViewController.m"
-            timestampString = "521814453.705382"
+            timestampString = "523375019.461217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -1279,13 +1279,13 @@
                   symbolName = "-[InputCustomerViewController submitCustomerInfo]"
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lee/Documents/Code/sen-master/%E6%A3%AE/Classes/Controllers/provider/InputCustomerViewController.m"
-                  timestampString = "523295487.615493"
+                  urlString = "file:///Users/lee/Documents/Code/sen/%E6%A3%AE/Classes/Controllers/provider/InputCustomerViewController.m"
+                  timestampString = "523375019.542416"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
                   endingLineNumber = "125"
-                  offsetFromSymbolStart = "1084">
+                  offsetFromSymbolStart = "1368">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1294,13 +1294,13 @@
                   symbolName = "__49-[InputCustomerViewController submitCustomerInfo]_block_invoke"
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lee/Documents/Code/sen-master/%E6%A3%AE/Classes/Controllers/provider/InputCustomerViewController.m"
-                  timestampString = "523295487.616851"
+                  urlString = "file:///Users/lee/Documents/Code/sen/%E6%A3%AE/Classes/Controllers/provider/InputCustomerViewController.m"
+                  timestampString = "523375019.544131"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "127"
-                  endingLineNumber = "127"
-                  offsetFromSymbolStart = "36">
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "80">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1567,13 +1567,13 @@
                   symbolName = "-[DJSignViewController loadData]"
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lee/Documents/Code/sen-master/%E6%A3%AE/Classes/Controllers/dajian/DJSignViewController.m"
-                  timestampString = "523295487.624163"
+                  urlString = "file:///Users/lee/Documents/Code/sen/%E6%A3%AE/Classes/Controllers/dajian/DJSignViewController.m"
+                  timestampString = "523375019.549872"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "231"
                   endingLineNumber = "231"
-                  offsetFromSymbolStart = "352">
+                  offsetFromSymbolStart = "504">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1582,13 +1582,13 @@
                   symbolName = "__32-[DJSignViewController loadData]_block_invoke"
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lee/Documents/Code/sen-master/%E6%A3%AE/Classes/Controllers/dajian/DJSignViewController.m"
-                  timestampString = "523295487.625675"
+                  urlString = "file:///Users/lee/Documents/Code/sen/%E6%A3%AE/Classes/Controllers/dajian/DJSignViewController.m"
+                  timestampString = "523375019.551353"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "233"
-                  endingLineNumber = "233"
-                  offsetFromSymbolStart = "52">
+                  startingLineNumber = "232"
+                  endingLineNumber = "232"
+                  offsetFromSymbolStart = "84">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2032,7 +2032,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/BindingAccountViewController.m"
-            timestampString = "523295487.554497"
+            timestampString = "523374519.574244"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"

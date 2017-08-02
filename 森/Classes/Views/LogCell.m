@@ -48,25 +48,11 @@
         make.top.mas_equalTo(self.contentView.mas_top).offset(15);
         make.width.mas_equalTo(80);
     }];
-    
-    [self.remarkTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.line1.mas_left);
-        make.top.mas_equalTo(self.line1.mas_bottom).offset(15);
-        make.width.mas_equalTo(self.titleLabel.mas_width);
-    }];
-    
-    [self.remarkDateTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.line2.mas_left);
-        make.top.mas_equalTo(self.line2.mas_bottom).offset(15);
-        make.width.mas_equalTo(self.titleLabel.mas_width);
-    }];
-    
     [self.titleDateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.titleLabel.mas_top);
         make.left.mas_equalTo(self.remarkContentLabel.mas_left);
         
     }];
-    
     [self.line1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.titleLabel.mas_left);
         make.height.mas_equalTo(0.5);
@@ -74,23 +60,29 @@
         make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(15);
     }];
     
-
     
+    [self.remarkTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.line1.mas_left);
+        make.top.mas_equalTo(self.line1.mas_bottom).offset(15);
+        make.width.mas_equalTo(self.titleLabel.mas_width);
+    }];
     [self.remarkContentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.remarkTitleLabel.mas_right).offset(10);
         make.top.mas_equalTo(self.remarkTitleLabel.mas_top);
         make.right.mas_equalTo(self.line1.mas_right);
     }];
-    
     [self.line2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.line1.mas_left);
         make.height.mas_equalTo(self.line1.mas_height);
         make.right.mas_equalTo(self.line1.mas_right);
-        make.top.mas_equalTo(self.remarkTitleLabel.mas_bottom).offset(15);
+        make.top.mas_equalTo(self.remarkContentLabel.mas_bottom).offset(15);
     }];
     
-
-    
+    [self.remarkDateTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.line2.mas_left);
+        make.top.mas_equalTo(self.line2.mas_bottom).offset(15);
+        make.width.mas_equalTo(self.titleLabel.mas_width);
+    }];
     [self.remarkDateValueLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.remarkContentLabel.mas_left);
         make.top.mas_equalTo(self.remarkDateTitleLabel.mas_top);
@@ -113,6 +105,7 @@
     self.titleLabel.text = log.title;
     if (log.order_follow_time) self.titleDateLabel.text = [NSString stringWithTimeInterval:log.order_follow_time format:@"yyyy-MM-dd"];
     self.remarkContentLabel.text = log.order_follow_desc;
+    self.remarkContentLabel.text = @"测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试";
     self.remarkDateValueLabel.text = [NSString stringWithTimeInterval:log.order_follow_create_time format:@"yyyy-MM-dd hh:mm:ss"];
 }
 
