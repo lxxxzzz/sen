@@ -90,7 +90,7 @@
 - (void)saveSync {
     NSString *url = [NSString stringWithFormat:@"%@?m=app&c=feedback&f=autoType", HOST];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    NSString *auto_type = self.sync.value ? @"2" : @"1";
+    NSString *auto_type = [self.sync.value integerValue] == 0 ? @"2" : @"1";
     parameters[@"auto_type"] = auto_type;
     parameters[@"access_token"] = TOKEN;
     __weak typeof(self) weakself = self;
