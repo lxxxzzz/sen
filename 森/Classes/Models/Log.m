@@ -17,8 +17,8 @@
         } else {
             return @"有效";
         }
-    } else if (self.user_order_status == 1) {
-        return @"无效";
+    } else if (self.user_order_status == 2) {
+        return @"已取消";
     } else {
         return @"签单";
     }

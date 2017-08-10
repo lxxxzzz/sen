@@ -18,7 +18,7 @@
 @property (nonatomic, weak) ArrowItem *typeItem;
 @property (nonatomic, weak) TextViewItem *remarkItem;
 @property (nonatomic, weak) ArrowItem *nextItem;
-@property (nonatomic, weak) MultiCell *firstResponderCell;
+//@property (nonatomic, weak) MultiCell *firstResponderCell;
 
 @end
 

@@ -89,14 +89,14 @@ static NSString *const kImageCellID = @"kImageCellID";
     
     // 首付款
     NSTimeInterval first_order_using_time = [paylist.first_order_using_time doubleValue];
-    NSTimeInterval order_time = [paylist.order_time doubleValue];
+    NSTimeInterval other_item_weikuan_old_time = [paylist.other_item_weikuan_old_time doubleValue];
     
     self.titleLabel1.text = @"合同金额";
     self.titleLabel2.text = @"尾款时间";
     self.titleLabel3.text = @"首付金额";
     self.titleLabel4.text = @"支付时间";
     self.valueLabel1.text = paylist.order_money;
-    self.valueLabel2.text = [NSString stringWithTimeInterval:order_time format:@"yyyy-MM-dd"];
+    self.valueLabel2.text = [NSString stringWithTimeInterval:other_item_weikuan_old_time format:@"yyyy-MM-dd"];
     self.valueLabel3.text = paylist.first_order_money;
     self.valueLabel4.text = [NSString stringWithTimeInterval:first_order_using_time format:@"yyyy-MM-dd"];
     

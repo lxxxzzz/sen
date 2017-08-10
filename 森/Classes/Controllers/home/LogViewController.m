@@ -121,6 +121,10 @@
     return 0.1f;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 #pragma mark - setter and getter
 #pragma mark getter
 - (UITableView *)tableView {

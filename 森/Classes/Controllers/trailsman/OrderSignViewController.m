@@ -189,7 +189,7 @@
         if (result.success) {
             if ([result.data isKindOfClass:[NSDictionary class]]) {
                 self.moneyItem.value = result.data[@"order_money"];
-                NSTimeInterval time = [result.data[@"sign_using_time"] doubleValue];
+                NSTimeInterval time = [result.data[@"sign_using_time"] integerValue];
                 self.dateItem.value = [NSString stringWithTimeInterval:time format:@"yyyy-MM-dd"];
 //                self.photos = [[result.data[@"sign_pic"] componentsSeparatedByString:@","] copy];
                 self.imageURLs = [[result.data[@"sign_pic"] componentsSeparatedByString:@","] copy];

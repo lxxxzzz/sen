@@ -12,6 +12,7 @@
 #import "LogViewController.h"
 #import "DJFollowDetailViewController.h"
 #import "DJSignViewController.h"
+#import "DJLogViewController.h"
 
 @interface DJDetailParentViewController ()
 
@@ -63,7 +64,7 @@
 
 #pragma mark ACTION
 - (void)log {
-    LogViewController *logVc = [[LogViewController alloc] init];
+    DJLogViewController *logVc = [[DJLogViewController alloc] init];
     logVc.order_id = self.order.customerId;
     [self.navigationController pushViewController:logVc animated:YES];
 }

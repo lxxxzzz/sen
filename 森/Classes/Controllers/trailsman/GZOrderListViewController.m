@@ -53,7 +53,7 @@
                 for(int i=0;i < order_list.count;i++) {
                     NSDictionary *dict = order_list[i];
                     Order *order = [Order mj_objectWithKeyValues:dict];
-                    order.type = OrderTypeDajian;
+                    order.type = OrderTypeKezi;
                     if (order.order_status == 1) {
                         order.status = OrderStatusDaichuli;
                     } else if (order.order_status == 2) {
