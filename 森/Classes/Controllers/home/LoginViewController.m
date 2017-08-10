@@ -275,14 +275,17 @@
             
             [[NSNotificationCenter defaultCenter] postNotificationName:kUserDidLoginNotification object:nil];
             
-            if ((user.alipay_account && user.alipay_account.length) || (user.bank_account && user.bank_account.length)) {
-                // 有设定过支付信息，到酒店列表
-                [RootVCManager rootVc];
+            if (user.user_type == 4) {
+                if ((user.alipay_account && user.alipay_account.length) || (user.bank_account && user.bank_account.length)) {
+                    // 有设定过支付信息，到酒店列表
+                    [RootVCManager rootVc];
+                } else {
+                    // 没有设定过支付信息，到绑定账号界面
+                    [RootVCManager bindingAccount:YES];
+                }
             } else {
-                // 没有设定过支付信息，到绑定账号界面
-                [RootVCManager bindingAccount:YES];
+                [RootVCManager rootVc];
             }
-            
             Log(@"%@",TOKEN);
         } else {
             [SVProgressHUD showErrorWithStatus:result.message];

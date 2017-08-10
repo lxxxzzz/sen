@@ -82,6 +82,7 @@
         make.top.mas_equalTo(self.dateLabel.mas_bottom).offset(16);
     }];
     
+    [self.contactsLabel setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
     [self.contactsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.dateLabel.mas_left);
         make.top.mas_equalTo(self.line.mas_bottom).offset(21);
@@ -104,6 +105,7 @@
         make.left.mas_equalTo(self.phoneLabel.mas_left);
         make.top.mas_equalTo(self.followerLabel.mas_top);
         make.height.mas_equalTo(self.dateLabel.mas_height);
+        make.right.mas_equalTo(self.backView.mas_right).offset(-15);
     }];
     
     [self.bottomLine mas_makeConstraints:^(MASConstraintMaker *make) {

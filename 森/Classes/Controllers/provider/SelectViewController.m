@@ -30,6 +30,14 @@
     [self setupNavigationItem];
     
     [self setupSubviews];
+    
+    int count = 0;
+    for (Option *option in self.dataSource) {
+        if (option.isSelected) {
+            count++;
+        }
+    }
+    self.headerView.count = count;
 }
 
 - (void)dealloc {
@@ -128,6 +136,7 @@
 }
 
 #pragma mark - setter and getter
+
 #pragma mark getter
 
 - (UITableView *)tableView {

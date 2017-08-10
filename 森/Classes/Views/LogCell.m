@@ -105,7 +105,6 @@
     self.titleLabel.text = log.title;
     if (log.order_follow_time) self.titleDateLabel.text = [NSString stringWithTimeInterval:log.order_follow_time format:@"yyyy-MM-dd"];
     self.remarkContentLabel.text = log.order_follow_desc;
-    self.remarkContentLabel.text = @"测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试";
     self.remarkDateValueLabel.text = [NSString stringWithTimeInterval:log.order_follow_create_time format:@"yyyy-MM-dd hh:mm:ss"];
 }
 

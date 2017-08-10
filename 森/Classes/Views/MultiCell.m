@@ -340,7 +340,9 @@ static CGFloat const margin = 105;
         
         [self.label mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.contentView.mas_left).offset(margin);
-            make.centerY.mas_equalTo(self.titleLabel.mas_centerY);
+//            make.centerY.mas_equalTo(self.titleLabel.mas_centerY);
+            make.top.mas_equalTo(self.contentView.mas_top).offset(8);
+            make.bottom.mas_equalTo(self.line.mas_bottom).offset(-8);
             make.right.mas_equalTo(self.arrow.mas_left).offset(-15);
         }];
         // 重新设定约束，避免循环应用

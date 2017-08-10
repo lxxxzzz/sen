@@ -45,7 +45,7 @@
 - (void)loadData {
     NSString *url = [NSString stringWithFormat:@"%@?m=app&c=order&f=dajianOrderSignOtherList&debug=1", HOST];
     NSDictionary *parameters = @{
-                                 @"access_token" : @"0b0a06e66a874c3c6f8cea3996c47151",
+                                 @"access_token" : TOKEN,
                                  @"user_dajian_order_id" : self.order_id
                                  };
     self.dataSource = @[];
