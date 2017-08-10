@@ -89,9 +89,9 @@
 
         self.payTimeItem = [BaseItem itemWithTitle:@"支付时间" value:[NSString nowDateWithTimeFormat:@"yyyy-MM-dd"] required:YES];
         
-        if (self.order.order_status == OrderStatusYibohui) {
+//        if (self.order.order_status == OrderStatusYibohui) {
             [self loadData];
-        }
+//        }
     }
     
     self.group1.items = @[
@@ -183,15 +183,17 @@
         if (result.success) {
             if ([result.data isKindOfClass:[NSDictionary class]]) {
                 self.group1.header = result.data[@"title"];
-                self.totalMoneyItem.value = result.data[@"first_input_content"];
-                self.totalMoneyItem.title = result.data[@"first_input_note"];
-                NSTimeInterval time = [result.data[@"second_input_content"] doubleValue];
-                
-                self.payTimeItem.title = result.data[@"second_input_note"];
-                self.payTimeItem.value = [NSString stringWithTimeInterval:time format:@"yyyy-MM-dd"];
-                
                 self.group2.header = result.data[@"third_input_note"];
-                self.imageURLs = result.data[@"third_input_content"];
+                
+                if (self.order.order_status == OrderStatusYibohui) {
+                    self.totalMoneyItem.value = result.data[@"first_input_content"];
+                    self.totalMoneyItem.title = result.data[@"first_input_note"];
+                    NSTimeInterval time = [result.data[@"second_input_content"] doubleValue];
+                    
+                    self.payTimeItem.title = result.data[@"second_input_note"];
+                    self.payTimeItem.value = [NSString stringWithTimeInterval:time format:@"yyyy-MM-dd"];
+                    self.imageURLs = result.data[@"third_input_content"];
+                }
                 [self.tableView reloadData];
             }
         }

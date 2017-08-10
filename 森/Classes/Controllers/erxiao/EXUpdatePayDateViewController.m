@@ -68,8 +68,9 @@
         
     } else {
         self.timeItem = [BaseItem itemWithTitle:@"申请时间" value:@(self.oldTime) required:NO];
-        [self loadData];
     }
+    
+    [self loadData];
     
     NSString *oldDate = [NSString stringWithTimeInterval:self.oldTime format:@"yyyy-MM-dd"];
     self.oldTimeItem = [BaseItem itemWithTitle:@"原时间" value:oldDate required:NO];
