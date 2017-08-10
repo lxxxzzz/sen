@@ -80,7 +80,7 @@
     parameters[@"order_area_hotel_id"] = self.areaItem.value;
     parameters[@"customer_name"] = self.nameItem.value;
     parameters[@"order_money"] = self.budgetItem.value;
-    parameters[@"use_date"] = self.dateItem.value;
+    parameters[@"use_date"] = @([self.dateItem.value integerValue]);;
     parameters[@"order_desc"] = self.remarkItem.value;
     __weak typeof(self) weakSelf = self;
     [HTTPTool POST:url parameters:parameters success:^(HTTPResult *result) {

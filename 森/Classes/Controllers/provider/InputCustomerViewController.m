@@ -118,7 +118,7 @@
     parameters[@"order_area_hotel_id"] = self.hotelItem.value;
     parameters[@"customer_name"] = self.nameItem.value;
     parameters[@"desk_count"] = self.countItem.value;
-    parameters[@"use_date"] = self.dateItem.value;
+    parameters[@"use_date"] = @([self.dateItem.value integerValue]);
     parameters[@"order_money"] = self.moneyItem.value;
     parameters[@"order_desc"] = self.descItem.value;
     __weak typeof(self) weakSelf = self;
