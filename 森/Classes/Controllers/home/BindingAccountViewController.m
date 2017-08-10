@@ -78,12 +78,11 @@
 
 - (void)setupNavigationItem {
     self.navigationItem.title = @"设定个人信息";
-    
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"icons_back_white" highImageName:@"icons_back_white" target:self action:@selector(back)];
-    
+
     if (self.isFirst) {
         self.rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"下一步" style:UIBarButtonItemStyleDone target:self action:@selector(next)];
     } else {
+        self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"icons_back_white" highImageName:@"icons_back_white" target:self action:@selector(back)];
         self.rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(save)];
     }
     
