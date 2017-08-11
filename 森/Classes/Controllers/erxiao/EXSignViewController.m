@@ -80,7 +80,6 @@
         // 不可以编辑
         self.totalMoneyItem = [BaseItem itemWithTitle:title value:@"" required:NO];
         self.payTimeItem = [BaseItem itemWithTitle:@"支付时间" value:@"" required:NO];
-        [self loadData];
     } else {
         // 可以编辑
         TextFieldItem *totalMoneyItem = [TextFieldItem itemWithTitle:title value:@"0" required:YES];
@@ -88,12 +87,8 @@
         self.totalMoneyItem = totalMoneyItem;
 
         self.payTimeItem = [BaseItem itemWithTitle:@"支付时间" value:[NSString nowDateWithTimeFormat:@"yyyy-MM-dd"] required:YES];
-        
-//        if (self.order.order_status == OrderStatusYibohui) {
-            [self loadData];
-//        }
     }
-    
+    [self loadData];
     self.group1.items = @[
                           self.totalMoneyItem,
                           self.payTimeItem
@@ -178,14 +173,14 @@
     parameters[@"user_dajian_order_id"] = self.order.customerId;
     @weakObj(self)
     [HTTPTool POST:url parameters:parameters success:^(HTTPResult *result) {
-        Log(@"%@",result);
         @strongObj(self)
         if (result.success) {
             if ([result.data isKindOfClass:[NSDictionary class]]) {
                 self.group1.header = result.data[@"title"];
                 self.group2.header = result.data[@"third_input_note"];
                 
-                if (self.order.order_status == OrderStatusYibohui) {
+                if (!self.editable || self.order.order_status == OrderStatusYibohui) {
+                    // 不可以编辑
                     self.totalMoneyItem.value = result.data[@"first_input_content"];
                     self.totalMoneyItem.title = result.data[@"first_input_note"];
                     NSTimeInterval time = [result.data[@"second_input_content"] doubleValue];
@@ -194,6 +189,7 @@
                     self.payTimeItem.value = [NSString stringWithTimeInterval:time format:@"yyyy-MM-dd"];
                     self.imageURLs = result.data[@"third_input_content"];
                 }
+
                 [self.tableView reloadData];
             }
         }

@@ -49,7 +49,7 @@
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 dateFormatter.dateFormat = @"YYYY-MM-dd";
                 weakNewTimeItem.subTitle = [dateFormatter stringFromDate:date];//该方法用于从日期对象返回日期字符串
-                weakNewTimeItem.value = [NSString stringWithFormat:@"%f",[date timeIntervalSince1970]];
+                weakNewTimeItem.value = [NSString stringWithFormat:@"%d",(int)[date timeIntervalSince1970]];
                 [weakSelf.tableView reloadData];
             };
         };

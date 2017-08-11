@@ -83,7 +83,7 @@
         parameters[@"access_token"] = TOKEN;
         parameters[@"user_dajian_order_id"] = self.order.customerId;
         parameters[@"user_order_status"] = @"1";
-        parameters[@"follow_time"] = [NSString stringWithFormat:@"%f",[NSDate date].timeIntervalSince1970 + [self.nextItem.value integerValue] * 24 * 60 * 60];
+        parameters[@"follow_time"] = [NSString stringWithFormat:@"%ld",(int)[NSDate date].timeIntervalSince1970 + [self.nextItem.value integerValue] * 24 * 60 * 60];
         parameters[@"follow_desc"] = self.remarkItem.value;
         [self keziOrderFollowWithParameters:parameters];
     } else if ([self.typeItem.value isEqualToString:@"3"]) {

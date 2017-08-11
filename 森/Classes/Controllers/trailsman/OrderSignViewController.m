@@ -68,7 +68,6 @@
     if (!self.editable) {
         // 不可以编辑
         self.moneyItem = [BaseItem itemWithTitle:@"合同金额" value:@"" required:YES];
-        
     } else {
         // 可以编辑
         TextFieldItem *moneyItem = [TextFieldItem itemWithTitle:@"合同金额" value:@"" required:YES];

@@ -84,16 +84,14 @@
         // 可以编辑
         ArrowItem *holdingTimeItem = [ArrowItem itemWithTitle:@"尾款时间" subTitle:nil required:NO];
         holdingTimeItem.placeholder = @"请选择尾款时间";
-//        holdingTimeItem.value = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
         __weak typeof(holdingTimeItem) weakHoldingTimeItem = holdingTimeItem;
         holdingTimeItem.task = ^{
             [weakSelf.dateKeyboardView show];
             weakSelf.dateKeyboardView.didSelectDate = ^(NSDate *date){
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 dateFormatter.dateFormat = @"YYYY-MM-dd";
-                weakHoldingTimeItem.subTitle = [dateFormatter stringFromDate:date];                weakHoldingTimeItem.value = [NSString stringWithFormat:@"%f",[date timeIntervalSince1970]];
+                weakHoldingTimeItem.subTitle = [dateFormatter stringFromDate:date];                weakHoldingTimeItem.value = [NSString stringWithFormat:@"%d",(int)[date timeIntervalSince1970]];
                 [weakSelf.tableView reloadData];
-                Log(@"----%@",weakHoldingTimeItem.value);
             };
         };
         self.holdingTimeItem = holdingTimeItem;
@@ -108,9 +106,8 @@
         
         ArrowItem *firstPayTimeItem = [ArrowItem itemWithTitle:@"首付时间" subTitle:[NSString nowDateWithTimeFormat:@"yyyy-MM-dd"] required:NO];
         firstPayTimeItem.disable = YES;
-        firstPayTimeItem.value = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
+        firstPayTimeItem.value = [NSString stringWithFormat:@"%d",(int)[[NSDate date] timeIntervalSince1970]];
         self.firstPayTimeItem = firstPayTimeItem;
-        
         ArrowItem *nextPayTimeItem = [ArrowItem itemWithTitle:@"支付时间" subTitle:nil required:NO];
         nextPayTimeItem.placeholder = @"请选择中款支付时间";
         __weak typeof(nextPayTimeItem) weakNextPayTimeItem = nextPayTimeItem;
@@ -120,7 +117,7 @@
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 dateFormatter.dateFormat = @"YYYY-MM-dd";
                 weakNextPayTimeItem.subTitle = [dateFormatter stringFromDate:date];//该方法用于从日期对象返回日期字符串
-                weakNextPayTimeItem.value = [NSString stringWithFormat:@"%f",[date timeIntervalSince1970]];
+                weakNextPayTimeItem.value = [NSString stringWithFormat:@"%d",(int)[date timeIntervalSince1970]];
                 [weakSelf.tableView reloadData];
             };
         };
