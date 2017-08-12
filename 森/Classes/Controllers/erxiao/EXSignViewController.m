@@ -423,6 +423,8 @@
 - (void)setImageURLs:(NSArray *)imageURLs {
     _imageURLs = imageURLs;
     
+    if (imageURLs == nil || imageURLs.count == 0) return;
+    
     __weak typeof(self) weakself = self;
     [self downloadImages:imageURLs comletion:^(NSArray *result) {
         
