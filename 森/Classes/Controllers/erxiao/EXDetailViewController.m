@@ -229,6 +229,7 @@
                         // 修改尾款时间
                         EXUpdatePayDateViewController *updateVc = [[EXUpdatePayDateViewController alloc] init];
                         updateVc.order_id = self.order.customerId;
+                        updateVc.oldTime = self.sign_using_time;
                         updateVc.editable = YES;
                         [self.navigationController pushViewController:updateVc animated:YES];
                     } else {

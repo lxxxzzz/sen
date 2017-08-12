@@ -57,6 +57,7 @@ static NSString *const kImageCellID = @"kImageCellID";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     ImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kImageCellID forIndexPath:indexPath];
+    Log(@">>>>>>>>>>>%@",self.paylist.order_sign_pic[indexPath.row]);
     cell.url = self.paylist.order_sign_pic[indexPath.row];
     return cell;
 }
@@ -72,7 +73,7 @@ static NSString *const kImageCellID = @"kImageCellID";
 
 - (void)setPaylist:(PayList *)paylist {
     _paylist = paylist;
-    Log(@"类型%ld  数量%ld  %@",self.paylist.sign_type,self.paylist.order_sign_pic.count,[[self.paylist.order_sign_pic firstObject] class]);
+    
     // 1 中款 2尾款 3附加款 4尾款时间 5首款
     NSTimeInterval order_time = [paylist.order_time doubleValue];
     NSString *strDate = [NSString stringWithTimeInterval:order_time format:@"yyyy-MM-dd"];
@@ -140,6 +141,7 @@ static NSString *const kImageCellID = @"kImageCellID";
     
     [self setNeedsLayout];
     [self layoutIfNeeded];
+    [self.collectionView reloadData];
 }
 
 - (UICollectionView *)collectionView {

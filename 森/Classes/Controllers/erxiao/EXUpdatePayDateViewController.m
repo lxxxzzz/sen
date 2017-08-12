@@ -74,7 +74,8 @@
     NSString *oldDate = [NSString stringWithTimeInterval:self.oldTime format:@"yyyy-MM-dd"];
     self.oldTimeItem = [BaseItem itemWithTitle:@"原时间" value:oldDate required:NO];
     
-    group.items = @[self.oldTimeItem,
+    group.items = @[
+                    self.oldTimeItem,
                     self.timeItem
                     ];
     self.dataSource = @[group];
@@ -106,7 +107,9 @@
 //                NSTimeInterval first_input_content = [result.data[@"first_input_content"] doubleValue];
 //                self.oldTimeItem.value = [NSString stringWithTimeInterval:first_input_content format:@"yyyy-MM-dd"];
                 
-                self.oldTimeItem.value = result.data[@"first_input_content"];
+                if (self.oldTime == 0) {
+                    self.oldTimeItem.value = result.data[@"first_input_content"];
+                }
                
                 NSTimeInterval second_input_content = [result.data[@"second_input_content"] doubleValue];
                 self.timeItem.value = [NSString stringWithTimeInterval:second_input_content format:@"yyyy-MM-dd"];

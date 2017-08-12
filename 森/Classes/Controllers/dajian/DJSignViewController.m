@@ -67,7 +67,7 @@
     __weak typeof(self) weakSelf = self;
     
     ItemGroup *group1 = [[ItemGroup alloc] init];
-    group1.header = @"首款明细";
+    group1.header = @"合同明细";
     NSString *date = [NSString nowDateWithTimeFormat:@"yyyy-MM-dd"];
     self.money = @"0";
     
@@ -76,9 +76,9 @@
         // 不可以编辑
         self.holdingTimeItem = [BaseItem itemWithTitle:@"尾款时间" value:date required:NO];
         self.totalMoneyItem = [BaseItem itemWithTitle:@"合同金额" value:@"" required:NO];
-        self.firstPayMoneyItem = [BaseItem itemWithTitle:@"首付金额" value:@"" required:NO];
-        self.firstPayTimeItem = [BaseItem itemWithTitle:@"首付时间" value:@"" required:NO];
-        self.nextPayTimeItem = [BaseItem itemWithTitle:@"下次支付时间" value:@"" required:NO];
+        self.firstPayMoneyItem = [BaseItem itemWithTitle:@"首款金额" value:@"" required:NO];
+        self.firstPayTimeItem = [BaseItem itemWithTitle:@"首款时间" value:@"" required:NO];
+        self.nextPayTimeItem = [BaseItem itemWithTitle:@"中款时间" value:@"" required:NO];
         
     } else {
         // 可以编辑
@@ -97,10 +97,12 @@
         self.holdingTimeItem = holdingTimeItem;
         
         TextFieldItem *totalMoneyItem = [TextFieldItem itemWithTitle:@"合同金额" value:@"" required:YES];
+        totalMoneyItem.placeholder = @"请输入合同金额";
         totalMoneyItem.keyboardType = UIKeyboardTypeNumberPad;
         self.totalMoneyItem = totalMoneyItem;
         
         TextFieldItem *firstPayMoneyItem = [TextFieldItem itemWithTitle:@"首付金额" value:@"" required:YES];
+        firstPayMoneyItem.placeholder = @"请输入首付金额";
         firstPayMoneyItem.keyboardType = UIKeyboardTypeNumberPad;
         self.firstPayMoneyItem = firstPayMoneyItem;
         
@@ -108,7 +110,7 @@
         firstPayTimeItem.disable = YES;
         firstPayTimeItem.value = [NSString stringWithFormat:@"%d",(int)[[NSDate date] timeIntervalSince1970]];
         self.firstPayTimeItem = firstPayTimeItem;
-        ArrowItem *nextPayTimeItem = [ArrowItem itemWithTitle:@"支付时间" subTitle:nil required:NO];
+        ArrowItem *nextPayTimeItem = [ArrowItem itemWithTitle:@"中款时间" subTitle:nil required:NO];
         nextPayTimeItem.placeholder = @"请选择中款支付时间";
         __weak typeof(nextPayTimeItem) weakNextPayTimeItem = nextPayTimeItem;
         nextPayTimeItem.task = ^{
@@ -135,7 +137,7 @@
     self.group2.items = @[@"合同凭证"];
 
     ItemGroup *group3 = [[ItemGroup alloc] init];
-    group3.header = @"中款支付时间";
+    group3.header = @"下次支付时间";
     group3.items = @[self.nextPayTimeItem];
 
     self.dataSource = @[group1, self.group2, group3];

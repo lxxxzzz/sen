@@ -71,6 +71,7 @@
     } else {
         // 可以编辑
         TextFieldItem *moneyItem = [TextFieldItem itemWithTitle:@"合同金额" value:@"" required:YES];
+        moneyItem.placeholder = @"请输入合同金额";
         moneyItem.keyboardType = UIKeyboardTypeNumberPad;
         self.moneyItem = moneyItem;
     }
