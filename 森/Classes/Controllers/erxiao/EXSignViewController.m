@@ -173,6 +173,7 @@
     parameters[@"user_dajian_order_id"] = self.order.customerId;
     @weakObj(self)
     [HTTPTool POST:url parameters:parameters success:^(HTTPResult *result) {
+        Log(@"%@",result);
         @strongObj(self)
         if (result.success) {
             if ([result.data isKindOfClass:[NSDictionary class]]) {

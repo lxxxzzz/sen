@@ -103,8 +103,10 @@
         if (result.success) {
             if ([result.data isKindOfClass:[NSDictionary class]]) {
                 
-                NSTimeInterval first_input_content = [result.data[@"first_input_content"] doubleValue];
-                self.oldTimeItem.value = [NSString stringWithTimeInterval:first_input_content format:@"yyyy-MM-dd"];
+//                NSTimeInterval first_input_content = [result.data[@"first_input_content"] doubleValue];
+//                self.oldTimeItem.value = [NSString stringWithTimeInterval:first_input_content format:@"yyyy-MM-dd"];
+                
+                self.oldTimeItem.value = result.data[@"first_input_content"];
                
                 NSTimeInterval second_input_content = [result.data[@"second_input_content"] doubleValue];
                 self.timeItem.value = [NSString stringWithTimeInterval:second_input_content format:@"yyyy-MM-dd"];
