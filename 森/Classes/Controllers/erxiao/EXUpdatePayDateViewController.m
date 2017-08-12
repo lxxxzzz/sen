@@ -37,8 +37,7 @@
     __weak typeof(self) weakSelf = self;
     ItemGroup *group = [[ItemGroup alloc] init];
     group.header = @"申请时间";
-//    NSString *date = [NSString stringWithTimeInterval:self.oldTime format:@"yyyy-MM-dd"];
-    
+
     if (self.editable) {
         ArrowItem *timeItem = [ArrowItem itemWithTitle:@"申请时间" subTitle:nil required:NO];
         timeItem.placeholder = @"请选择申请时间";

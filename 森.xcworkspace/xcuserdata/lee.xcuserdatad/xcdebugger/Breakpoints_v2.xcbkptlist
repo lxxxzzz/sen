@@ -337,7 +337,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/dajian/DJSignViewController.m"
-            timestampString = "524066727.633746"
+            timestampString = "524215706.137871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -353,7 +353,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/dajian/DJSignViewController.m"
-            timestampString = "524066727.634176"
+            timestampString = "524215706.137947"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -369,7 +369,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/dajian/DJSignViewController.m"
-            timestampString = "524066727.634446"
+            timestampString = "524215706.138005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
@@ -752,7 +752,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXSignViewController.m"
-            timestampString = "524212853.256829"
+            timestampString = "524215706.138241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "197"
@@ -960,7 +960,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXSignViewController.m"
-            timestampString = "524212853.25703"
+            timestampString = "524215706.138787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "368"
@@ -1008,7 +1008,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXSignViewController.m"
-            timestampString = "524212853.257105"
+            timestampString = "524215706.139109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "369"
@@ -1024,11 +1024,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXUpdatePayDateViewController.m"
-            timestampString = "524068820.3252"
+            timestampString = "524215706.139379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "-submit"
             landmarkType = "7">
             <Locations>
@@ -1072,11 +1072,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXUpdatePayDateViewController.m"
-            timestampString = "524068820.325245"
+            timestampString = "524215706.139435"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "-submit"
             landmarkType = "7">
          </BreakpointContent>
@@ -1088,11 +1088,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXUpdatePayDateViewController.m"
-            timestampString = "524068820.325288"
+            timestampString = "524215706.139483"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "EXUpdatePayDateViewController"
             landmarkType = "3">
             <Locations>
@@ -1136,11 +1136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXUpdatePayDateViewController.m"
-            timestampString = "524068820.32533"
+            timestampString = "524215706.139531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "-loadData"
             landmarkType = "7">
          </BreakpointContent>
@@ -1152,7 +1152,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXUpdatePayDateViewController.m"
-            timestampString = "524068820.325371"
+            timestampString = "524215706.139578"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -1168,11 +1168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXUpdatePayDateViewController.m"
-            timestampString = "524068820.325412"
+            timestampString = "524215706.139624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "-loadData"
             landmarkType = "7">
          </BreakpointContent>
@@ -1184,11 +1184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXUpdatePayDateViewController.m"
-            timestampString = "524068820.325453"
+            timestampString = "524215706.13967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "EXUpdatePayDateViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1244,7 +1244,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/provider/InputCustomerViewController.m"
@@ -1257,34 +1257,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[InputCustomerViewController submitCustomerInfo]"
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lee/Documents/sen/%E6%A3%AE/Classes/Controllers/provider/InputCustomerViewController.m"
-                  timestampString = "524065761.245757"
+                  timestampString = "524215706.162749"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
                   endingLineNumber = "125"
-                  offsetFromSymbolStart = "1674">
+                  offsetFromSymbolStart = "1144">
                </Location>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__49-[InputCustomerViewController submitCustomerInfo]_block_invoke"
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lee/Documents/sen/%E6%A3%AE/Classes/Controllers/provider/InputCustomerViewController.m"
-                  timestampString = "524065761.247775"
+                  timestampString = "524215706.164154"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "126"
                   endingLineNumber = "126"
-                  offsetFromSymbolStart = "61">
+                  offsetFromSymbolStart = "40">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1376,7 +1376,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/dajian/DJSignViewController.m"
-            timestampString = "524066727.635276"
+            timestampString = "524215706.139803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "233"
@@ -1488,7 +1488,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/dajian/DJSignViewController.m"
-            timestampString = "524066727.635698"
+            timestampString = "524215706.139949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "231"
@@ -1856,7 +1856,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Tools/Util.m"
-            timestampString = "524212853.257597"
+            timestampString = "524215706.140177"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -1872,7 +1872,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Tools/Util.m"
-            timestampString = "524212853.257648"
+            timestampString = "524215706.140225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -1888,7 +1888,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Tools/Util.m"
-            timestampString = "524212853.257714"
+            timestampString = "524215706.14027"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -1984,11 +1984,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXUpdatePayDateViewController.m"
-            timestampString = "524068820.326127"
+            timestampString = "524215706.140366"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "-submit"
             landmarkType = "7">
             <Locations>
@@ -2000,12 +2000,12 @@
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lee/Documents/sen/%E6%A3%AE/Classes/Controllers/erxiao/EXUpdatePayDateViewController.m"
-                  timestampString = "524212853.293415"
+                  timestampString = "524215706.170381"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "603">
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "604">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2015,12 +2015,12 @@
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lee/Documents/sen/%E6%A3%AE/Classes/Controllers/erxiao/EXUpdatePayDateViewController.m"
-                  timestampString = "524212853.294987"
+                  timestampString = "524215706.171694"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
-                  offsetFromSymbolStart = "30">
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "36">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2032,12 +2032,124 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/erxiao/EXSignViewController.m"
-            timestampString = "524212853.257811"
+            timestampString = "524215706.140416"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
             landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Controllers/trailsman/TMInputCustomerViewController.m"
+            timestampString = "524213939.389517"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "-submitCustomerInfo"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TMInputCustomerViewController submitCustomerInfo]"
+                  moduleName = "&#x68ee;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lee/Documents/sen/%E6%A3%AE/Classes/Controllers/trailsman/TMInputCustomerViewController.m"
+                  timestampString = "524215706.174863"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "1144">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__51-[TMInputCustomerViewController submitCustomerInfo]_block_invoke"
+                  moduleName = "&#x68ee;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lee/Documents/sen/%E6%A3%AE/Classes/Controllers/trailsman/TMInputCustomerViewController.m"
+                  timestampString = "524215706.176271"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Controllers/trailsman/CreateDajianViewController.m"
+            timestampString = "524214028.902537"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-submit"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CreateDajianViewController submit]"
+                  moduleName = "&#x68ee;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lee/Documents/sen/%E6%A3%AE/Classes/Controllers/trailsman/CreateDajianViewController.m"
+                  timestampString = "524215706.17927"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "948">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__36-[CreateDajianViewController submit]_block_invoke"
+                  moduleName = "&#x68ee;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lee/Documents/sen/%E6%A3%AE/Classes/Controllers/trailsman/CreateDajianViewController.m"
+                  timestampString = "524215706.180597"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Controllers/erxiao/EXSignViewController.m"
+            timestampString = "524215706.140722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
+            landmarkName = "-loadData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
