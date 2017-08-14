@@ -39,6 +39,7 @@
             make.left.mas_equalTo(self.mas_left).offset(9);
             make.top.mas_equalTo(self.cycleScrollView.mas_bottom).offset(10);
             make.bottom.mas_equalTo(self.mas_bottom).offset(-10);
+            make.right.mas_equalTo(self.mas_right).offset(-9);
         }];
         
         [self.priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -43,8 +43,10 @@
 
 - (void)setRoom:(Room *)room {
     _room = room;
-    NSString *url = [room.room_image firstObject];
-    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:url]];
+//    NSString *url = [room.room_image firstObject];
+    NSString *encodedString = [[room.room_image firstObject] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL *url = [NSURL URLWithString:encodedString];
+    [self.iconImageView sd_setImageWithURL:url];
     self.nameLabel.text = [NSString stringWithFormat:@"%@", room.room_name];
     self.infoLabel.text = [NSString stringWithFormat:@"桌数：%@   层高：%@   立柱：%@", room.room_best_desk, room.room_high, room.room_lz];
 }
