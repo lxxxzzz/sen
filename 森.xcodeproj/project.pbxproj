@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E9FB81F415E5E00D38C29 /* NSURL+chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FB71F415E5E00D38C29 /* NSURL+chinese.m */; };
 		0449655D1F2F1FF900FC90DB /* HistorySearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0449655C1F2F1FF900FC90DB /* HistorySearchCell.m */; };
 		9B00C0E31F19BA8F006D7B4E /* PaymentRecordsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B00C0E21F19BA8F006D7B4E /* PaymentRecordsCell.m */; };
 		9B00C0E61F19E71E006D7B4E /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B00C0E51F19E71E006D7B4E /* NavigationViewController.m */; };
@@ -154,6 +155,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040E9FB61F415E5E00D38C29 /* NSURL+chinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+chinese.h"; sourceTree = "<group>"; };
+		040E9FB71F415E5E00D38C29 /* NSURL+chinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+chinese.m"; sourceTree = "<group>"; };
 		0449655B1F2F1FF900FC90DB /* HistorySearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistorySearchCell.h; sourceTree = "<group>"; };
 		0449655C1F2F1FF900FC90DB /* HistorySearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistorySearchCell.m; sourceTree = "<group>"; };
 		2E8D421FB715F28C164979EF /* Pods-森.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-森.release.xcconfig"; path = "Pods/Target Support Files/Pods-森/Pods-森.release.xcconfig"; sourceTree = "<group>"; };
@@ -731,6 +734,8 @@
 				9BFDABAB1E966A9300089E09 /* UIBarButtonItem+Extension.m */,
 				E05A34311E9C790C004BB45E /* UIImage+Extension.h */,
 				E05A34321E9C790C004BB45E /* UIImage+Extension.m */,
+				040E9FB61F415E5E00D38C29 /* NSURL+chinese.h */,
+				040E9FB71F415E5E00D38C29 /* NSURL+chinese.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1137,6 +1142,7 @@
 				9B525F891F113004004F2835 /* Paylist2Cell.m in Sources */,
 				9B22C3CE1ED531A7007911C9 /* TMInputCustomerViewController.m in Sources */,
 				9B5C929B1ED81E3E0082BEA3 /* CheckDajianViewController.m in Sources */,
+				040E9FB81F415E5E00D38C29 /* NSURL+chinese.m in Sources */,
 				9BFD11121E82AC4800696B24 /* AppDelegate.m in Sources */,
 				9BF8C9431E895DAC00C8E567 /* HTTPResult.m in Sources */,
 				9B695EAD1EC024D100EC1B4D /* AlbumCell.m in Sources */,

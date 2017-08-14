@@ -15,7 +15,7 @@
     if (self = [super initWithFrame:frame]) {
         [self.contentView addSubview:self.label];
         self.layer.borderColor = HEX(@"E1E1E6").CGColor;
-        self.layer.borderWidth = 1;
+        self.layer.borderWidth = 0.5;
         self.layer.cornerRadius = 16;
     }
     return self;

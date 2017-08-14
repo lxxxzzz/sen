@@ -22,6 +22,7 @@
 @property (nonatomic, weak) UITextView *questionContent;
 @property (nonatomic, weak) UITextField *phoneNumber;
 @property (nonatomic, strong) FeedbackSuccessView *successView;
+@property (nonatomic, strong) UILabel *versionLabel;
 
 @end
 
@@ -125,6 +126,8 @@
     scrollView.delegate = self;
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
+    
+    [self.view addSubview:self.versionLabel];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewClick)];
     [scrollView addGestureRecognizer:tap];
@@ -245,6 +248,11 @@
         make.right.mas_equalTo(phoneContainer.mas_right).offset(-45);
     }];
     
+    
+    [self.versionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-20);
+        make.centerX.mas_equalTo(self.view.mas_centerX);
+    }];
 }
 
 #pragma mark - delegate
@@ -266,6 +274,16 @@
         _successView.delegate = self;
     }
     return _successView;
+}
+
+- (UILabel *)versionLabel {
+    if (_versionLabel == nil) {
+        _versionLabel = [[UILabel alloc] init];
+        _versionLabel.text = @"V1.0.0";
+        _versionLabel.font = FONT(12);
+        _versionLabel.textColor = HEX(@"#cccccc");
+    }
+    return _versionLabel;
 }
 
 @end
