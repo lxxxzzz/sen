@@ -279,7 +279,9 @@
 - (UILabel *)versionLabel {
     if (_versionLabel == nil) {
         _versionLabel = [[UILabel alloc] init];
-        _versionLabel.text = @"V1.0.0";
+        NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+        NSString *appVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+        _versionLabel.text = [NSString stringWithFormat:@"V %@",appVersion];
         _versionLabel.font = FONT(12);
         _versionLabel.textColor = HEX(@"#cccccc");
     }
