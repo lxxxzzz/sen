@@ -207,14 +207,12 @@
             [SVProgressHUD showErrorWithStatus:error];
             return;
         }
-    
-#ifndef DEBUG
+        
         error = [self checkCaptcha];
         if (error) {
             [SVProgressHUD showErrorWithStatus:error];
             return;
         }
-#endif
     } else {
         _captcha = @"8888";
     }

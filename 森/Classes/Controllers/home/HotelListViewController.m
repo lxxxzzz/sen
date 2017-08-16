@@ -79,7 +79,7 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     Log(@"token ---- %@",TOKEN);
 }
 
