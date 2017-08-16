@@ -22,6 +22,8 @@
 @property (nonatomic, strong) UILabel *followerNameLabel;
 @property (nonatomic, strong) UIView *bottomLine;
 @property (nonatomic, strong) UIButton *statusMessageBtn;
+@property (nonatomic, strong) UILabel *sourceNameLabel;
+@property (nonatomic, strong) UILabel *sourceValueLabel;
 
 @end
 
@@ -55,6 +57,8 @@
     [self.backView addSubview:self.followerNameLabel];
     [self.backView addSubview:self.bottomLine];
     [self.backView addSubview:self.statusMessageBtn];
+    [self.backView addSubview:self.sourceNameLabel];
+    [self.backView addSubview:self.sourceValueLabel];
     
     [self.backView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.contentView.mas_top).offset(5);
@@ -82,9 +86,22 @@
         make.top.mas_equalTo(self.dateLabel.mas_bottom).offset(16);
     }];
     
-    [self.contactsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.sourceNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.dateLabel.mas_left);
         make.top.mas_equalTo(self.line.mas_bottom).offset(21);
+        make.height.mas_equalTo(16);
+    }];
+    
+    [self.sourceValueLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.backView.mas_left).offset(100);
+        make.top.mas_equalTo(self.sourceNameLabel.mas_top);
+        make.height.mas_equalTo(self.sourceNameLabel.mas_height);
+    }];
+    
+    [self.contactsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.dateLabel.mas_left);
+        make.top.mas_equalTo(self.sourceNameLabel.mas_bottom).offset(21);
+//        make.top.mas_equalTo(self.line.mas_bottom).offset(21);
         make.height.mas_equalTo(self.dateLabel.mas_height);
     }];
     
@@ -134,6 +151,19 @@
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = @"yyyy-MM-dd hh:mm:ss";
     self.dateLabel.text = [fmt stringFromDate:date];
+    self.sourceValueLabel.text = order.order_from;
+    
+    if (order.showSource) {
+        [self.sourceNameLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(16);
+            make.top.mas_equalTo(self.line.mas_bottom).offset(21);
+        }];
+    } else {
+        [self.sourceNameLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(0);
+            make.top.mas_equalTo(self.line.mas_bottom);
+        }];
+    }
     
     if (order.status == OrderStatusDaichuli) {
         if (order.erxiao_status) {
@@ -369,6 +399,25 @@
         [_statusMessageBtn addTarget:self action:@selector(statusMessageBtnOnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _statusMessageBtn;
+}
+
+- (UILabel *)sourceNameLabel {
+    if (_sourceNameLabel == nil) {
+        _sourceNameLabel = [[UILabel alloc] init];
+        _sourceNameLabel.text = @"来源";
+        _sourceNameLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:14];
+        _sourceNameLabel.textColor = [UIColor colorWithRed:147/255.0 green:147/255.0 blue:153/255.0 alpha:1/1.0];
+    }
+    return _sourceNameLabel;
+}
+
+- (UILabel *)sourceValueLabel {
+    if (_sourceValueLabel == nil) {
+        _sourceValueLabel = [[UILabel alloc] init];
+        _sourceValueLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:14];
+        _sourceValueLabel.textColor = [UIColor colorWithRed:49/255.0 green:49/255.0 blue:51/255.0 alpha:1/1.0];
+    }
+    return _sourceValueLabel;
 }
 
 @end

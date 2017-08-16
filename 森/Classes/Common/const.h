@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 #import "UIColor+Extension.h"
+#import "HostTool.h"
 
 // 颜色
 #define RGB(r,g,b) [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f)blue:((float) b / 255.0f) alpha:1.0f]
@@ -39,11 +40,16 @@
 #define Log(FORMAT, ...) fprintf(stderr,"%s: %d\t %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #endif
 
-#ifdef DEBUG
-    #define HOST @"http://dev.51isen.com/index.php"
-#else
-    #define HOST @"http://app.51isen.com/index.php"
-#endif
+//#ifdef DEBUG
+//    #define HOST @"http://dev.51isen.com/index.php"
+//#else
+//    #define HOST @"http://app.51isen.com/index.php"
+//#endif
+
+#define HOST [HostTool host]
+
+#define DEBUG_HOST @"http://dev.51isen.com/index.php"
+#define RELEASE_HOST @"http://app.51isen.com/index.php"
 
 #define strongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
 #define weakObj(o) try{}@finally{} __weak typeof(o) o##Weak = o;
@@ -60,5 +66,7 @@ UIKIT_EXTERN NSString *const kAliyunSecretKey;
 UIKIT_EXTERN NSString *const kSpecialAccount;
 UIKIT_EXTERN NSNotificationName const kUserDidLogoutNotification;
 UIKIT_EXTERN NSNotificationName const kUserDidLoginNotification;
+
+UIKIT_EXTERN NSString *const kURLKey;
 
 

@@ -77,10 +77,6 @@
         // 延迟0.1秒执行，不然设定scrollView的contentOffSize不起作用
         [self updateLoginStatus:NO];
     });
-    
-#ifdef DEBUG
-    _captcha = @"1000";
-#endif
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -537,9 +533,6 @@
         _accountText = [[UITextField alloc] init];
         _accountText.font = FONT(16);
         _accountText.placeholder = @"请输入账号";
-#ifdef DEBUG
-        _accountText.text = @"jd001";
-#endif
         _accountText.clearButtonMode = UITextFieldViewModeWhileEditing;
         _accountText.autocorrectionType = UITextAutocorrectionTypeNo;
         _accountText.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -572,9 +565,6 @@
         _passwordText.font = FONT(16);
         _passwordText.secureTextEntry = YES;
         _passwordText.placeholder = @"请输入密码";
-#ifdef DEBUG
-        _passwordText.text = @"123456";
-#endif
         [_passwordText addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     }
     return _passwordText;
@@ -603,9 +593,6 @@
         _phoneNumberText = [[UITextField alloc] init];
         _phoneNumberText.font = FONT(16);
         _phoneNumberText.placeholder = @"请输入手机号";
-#ifdef DEBUG
-        _phoneNumberText.text = @"18501617106";
-#endif
         _phoneNumberText.clearButtonMode = UITextFieldViewModeWhileEditing;
         _phoneNumberText.keyboardType = UIKeyboardTypeNumberPad;
         _phoneNumberText.autocorrectionType = UITextAutocorrectionTypeNo;

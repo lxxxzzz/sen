@@ -59,6 +59,7 @@
     UMConfigInstance.appKey = @"595486fe4ad15672e9000310";
     UMConfigInstance.ChannelId = @"App Store";
     [MobClick startWithConfigure:UMConfigInstance];
+
     return YES;
 }
 

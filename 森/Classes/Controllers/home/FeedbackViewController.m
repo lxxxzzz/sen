@@ -11,6 +11,8 @@
 #import "HTTPTool.h"
 #import "TextView.h"
 #import "NSString+Extension.h"
+#import "EasterEggViewController.h"
+#import "NavigationViewController.h"
 
 #import <SVProgressHUD.h>
 #import <Masonry.h>
@@ -117,6 +119,14 @@
 - (void)viewClick {
     [self.view endEditing:YES];
 }
+
+-(void)tapAction:(UITapGestureRecognizer *)tap {
+    
+    Log(@"拍一下");
+    NavigationViewController *nav = [[NavigationViewController alloc] initWithRootViewController:[[EasterEggViewController alloc] init]];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
 
 #pragma mark 布局
 - (void)setupSubviews {
@@ -284,6 +294,13 @@
         _versionLabel.text = [NSString stringWithFormat:@"V %@",appVersion];
         _versionLabel.font = FONT(12);
         _versionLabel.textColor = HEX(@"#cccccc");
+        _versionLabel.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc]initWithTarget:self     action:@selector(tapAction:)];
+        //轻拍次数
+        tap.numberOfTapsRequired = 4;
+        //轻拍手指个数
+        tap.numberOfTouchesRequired = 1;
+        [_versionLabel addGestureRecognizer:tap];
     }
     return _versionLabel;
 }

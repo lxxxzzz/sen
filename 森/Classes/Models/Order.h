@@ -39,4 +39,7 @@ typedef NS_ENUM(NSInteger, OrderType){
 @property (nonatomic, assign) OrderType type;
 @property (nonatomic, copy) NSString *erxiao_status;
 
+@property (nonatomic, copy) NSString *order_from;
+@property (nonatomic, assign) BOOL showSource;
+
 @end

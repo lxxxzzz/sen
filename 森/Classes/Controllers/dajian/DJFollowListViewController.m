@@ -49,6 +49,7 @@
                 for(int i=0;i < order_list.count;i++) {
                     NSDictionary *dict = order_list[i];
                     Order *order = [Order mj_objectWithKeyValues:dict];
+                    order.showSource = YES;
                     order.type = OrderTypeDajian;
                     if (order.order_status == 1) {
                         order.status = OrderStatusDaichuli;
@@ -85,64 +86,6 @@
         }
     }];
 }
-
-/*
-- (void)loadDataWithStatus:(NSString *)status completion:(void(^)(NSArray *orders))completion {
-    NSString *url = [NSString stringWithFormat:@"%@?m=app&c=order&f=orderDaJianList&debug=1", HOST];
-    NSDictionary *parameters = @{
-                                 @"access_token" : TOKEN,
-                                 @"order_status" : status
-                                 };
-    [HTTPTool POST:url parameters:parameters success:^(HTTPResult *result) {
-
-        if (result.success) {
-            Log(@"%@",result);
-            NSArray *order_list = result.data[@"order_list"];
-            if (order_list.count) {
-                NSMutableArray *orders = [NSMutableArray array];
-                for(int i=0;i < order_list.count;i++) {
-                    NSDictionary *dict = order_list[i];
-                    Order *order = [Order mj_objectWithKeyValues:dict];
-                    if (order.order_status == 1) {
-                        order.status = OrderStatusDaichuli;
-                    } else if (order.order_status == 2) {
-                        order.status = OrderStatusDaishenhe;
-                    } else if (order.order_status == 3) {
-                        order.status = OrderStatusDaijiesuan;
-                    } else if (order.order_status == 4) {
-                        order.status = OrderStatusYijiesuan;
-                    } else if (order.order_status == 5) {
-                        order.status = OrderStatusYibohui;
-                    } else if (order.order_status == 6) {
-                        order.status = OrderStatusYiquxiao;
-                    }
-                    [orders addObject:order];
-                }
-                
-                if (completion) {
-                    completion(orders);
-                } else {
-                    if (completion) {
-                        completion(@[]);
-                    }
-                }
-            } else {
-                if (completion) {
-                    completion(@[]);
-                }
-            }
-        } else {
-            if (completion) {
-                completion(@[]);
-            }
-        }
-    } failure:^(NSError *error) {
-        if (completion) {
-            completion(@[]);
-        }
-    }];
-}
- */
 
 #pragma mark - delegate
 - (void)baseOrderListViewController:(BaseOrderListViewController *)viewController didSelectOrder:(Order *)order {
