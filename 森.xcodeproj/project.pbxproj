@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		040E9FB81F415E5E00D38C29 /* NSURL+chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FB71F415E5E00D38C29 /* NSURL+chinese.m */; };
 		0415AB911F44278F00F6C393 /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0415AB901F44278F00F6C393 /* EasterEggViewController.m */; };
-		0415AB941F44329600F6C393 /* HostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0415AB931F44329600F6C393 /* HostManager.m */; };
 		0415AB971F44359B00F6C393 /* HostTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0415AB961F44359B00F6C393 /* HostTool.m */; };
 		0449655D1F2F1FF900FC90DB /* HistorySearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0449655C1F2F1FF900FC90DB /* HistorySearchCell.m */; };
 		9B00C0E31F19BA8F006D7B4E /* PaymentRecordsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B00C0E21F19BA8F006D7B4E /* PaymentRecordsCell.m */; };
@@ -162,8 +161,6 @@
 		040E9FB71F415E5E00D38C29 /* NSURL+chinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+chinese.m"; sourceTree = "<group>"; };
 		0415AB8F1F44278F00F6C393 /* EasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasterEggViewController.h; sourceTree = "<group>"; };
 		0415AB901F44278F00F6C393 /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
-		0415AB921F44329600F6C393 /* HostManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostManager.h; sourceTree = "<group>"; };
-		0415AB931F44329600F6C393 /* HostManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostManager.m; sourceTree = "<group>"; };
 		0415AB951F44359B00F6C393 /* HostTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostTool.h; sourceTree = "<group>"; };
 		0415AB961F44359B00F6C393 /* HostTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostTool.m; sourceTree = "<group>"; };
 		0449655B1F2F1FF900FC90DB /* HistorySearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistorySearchCell.h; sourceTree = "<group>"; };
@@ -788,8 +785,6 @@
 				9B2DB60B1EEBCC8D0037D926 /* Room.m */,
 				9B07B0771F0295560064E7A5 /* PayList.h */,
 				9B07B0781F0295560064E7A5 /* PayList.m */,
-				0415AB921F44329600F6C393 /* HostManager.h */,
-				0415AB931F44329600F6C393 /* HostManager.m */,
 				0415AB951F44359B00F6C393 /* HostTool.h */,
 				0415AB961F44359B00F6C393 /* HostTool.m */,
 			);
@@ -1140,7 +1135,6 @@
 				9B22C3111ED287B0007911C9 /* HotelListCell.m in Sources */,
 				9B5C929E1ED821230082BEA3 /* BasePlainViewController.m in Sources */,
 				E05A34101E8A4E61004BB45E /* SegmentControl.m in Sources */,
-				0415AB941F44329600F6C393 /* HostManager.m in Sources */,
 				9B5C92871ED6E21C0082BEA3 /* ReviewProgressCell.m in Sources */,
 				9BF20B951EE13A97005D541D /* DJFollowDetailViewController.m in Sources */,
 				9B0546051F150AE60066E65B /* ImageCollectionCell.m in Sources */,
