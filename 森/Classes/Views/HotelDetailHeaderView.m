@@ -53,7 +53,14 @@
 - (void)setHotel:(Hotel *)hotel {
     _hotel = hotel;
     
-    self.cycleScrollView.imageURLStringsGroup = hotel.hotel_images;
+    // 解决url中文
+    NSMutableArray *urls = [NSMutableArray array];
+    for (NSString *str in hotel.hotel_images) {
+        NSString *encodedString = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [urls addObject:encodedString];
+    }
+    
+    self.cycleScrollView.imageURLStringsGroup = urls;
     self.nameLabel.text = hotel.hotel_name;
     self.priceLabel.text = [NSString stringWithFormat:@"（￥%ld-%ld/桌  桌数:%ld）", hotel.hotel_low, hotel.hotel_high, hotel.hotel_max_desk];
 }
