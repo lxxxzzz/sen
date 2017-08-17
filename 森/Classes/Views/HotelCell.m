@@ -8,6 +8,7 @@
 
 #import "HotelCell.h"
 #import "Room.h"
+#import "NSURL+chinese.h"
 #import <UIImageView+WebCache.h>
 
 @interface HotelCell ()
@@ -46,7 +47,7 @@
 //    NSString *url = [room.room_image firstObject];
 //    NSString *encodedString = [[room.room_image firstObject] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 //    NSURL *url = [NSURL URLWithString:encodedString];
-    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:[room.room_image firstObject]]];
+    [self.iconImageView sd_setImageWithURL:[NSURL xx_URLWithString:[room.room_image firstObject]]];
     self.nameLabel.text = [NSString stringWithFormat:@"%@", room.room_name];
     self.infoLabel.text = [NSString stringWithFormat:@"桌数：%@   层高：%@   立柱：%@", room.room_best_desk, room.room_high, room.room_lz];
 }

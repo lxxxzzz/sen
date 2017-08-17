@@ -9,6 +9,7 @@
 #import "PhotoBrowserCell.h"
 #import "PhotoManager.h"
 #import "Photo.h"
+#import "NSURL+chinese.h"
 #import <UIImageView+WebCache.h>
 
 @interface PhotoBrowserCell ()
@@ -64,7 +65,7 @@
             }];
         }
     } else {
-        [weakself.imageView sd_setImageWithURL:[NSURL URLWithString:photo] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [weakself.imageView sd_setImageWithURL:[NSURL xx_URLWithString:photo] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             if (image) {
                 CGFloat height = self.frame.size.width * image.size.height / image.size.width;
                 CGFloat y = (self.frame.size.height - height) / 2.0;

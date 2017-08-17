@@ -9,6 +9,7 @@
 #import "PhotoWallCell.h"
 #import "Photo.h"
 #import "PhotoManager.h"
+#import "NSURL+chinese.h"
 #import <UIImageView+WebCache.h>
 
 @interface PhotoWallCell ()
@@ -66,7 +67,7 @@
                 }];
             }
         } else{
-            [weakself.imageView sd_setImageWithURL:[NSURL URLWithString:photo] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            [weakself.imageView sd_setImageWithURL:[NSURL xx_URLWithString:photo] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                 if (image) {
                     weakself.userInteractionEnabled = YES;
                 } else {

@@ -8,6 +8,7 @@
 
 #import "HotelListCell.h"
 #import "Hotel.h"
+#import "NSURL+chinese.h"
 #import <UIImageView+WebCache.h>
 
 @interface HotelListCell ()
@@ -49,7 +50,7 @@
     self.area.text = [NSString stringWithFormat:@"%@  %@", hotel.area_sh_name, hotel.hotel_type];
     self.telephone.text = hotel.hotel_phone;
 
-    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:hotel.hotel_image]];
+    [self.iconImageView sd_setImageWithURL:[NSURL xx_URLWithString:hotel.hotel_image]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -12,14 +12,14 @@
 @implementation NSURL (chinese)
 
 + (void)load {
-    Method m1 = class_getClassMethod(self, @selector(URLWithString:));
-    Method m2 = class_getClassMethod(self, @selector(xx_URLWithString:));
-    method_exchangeImplementations(m1, m2);
+//    Method m1 = class_getClassMethod(self, @selector(URLWithString:));
+//    Method m2 = class_getClassMethod(self, @selector(xx_URLWithString:));
+//    method_exchangeImplementations(m1, m2);
 }
 
 + (instancetype)xx_URLWithString:(NSString *)url {
     NSString *encodedString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    return [self xx_URLWithString:encodedString];
+    return [self URLWithString:encodedString];
 }
 
 @end

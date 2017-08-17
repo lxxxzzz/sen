@@ -37,7 +37,7 @@
                     put.objectKey = [NSString stringWithFormat:@"upload/user_app/%@", fileName];
 //                    put.uploadingData = UIImagePNGRepresentation(photo.hdImage); // 直接上传NSData
                     put.uploadingData = UIImageJPEGRepresentation(photo.hdImage, 0.4);
-                    Log(@"%ld", put.uploadingData.length);
+                    Log(@"%@", put.uploadingData);
                     OSSTask * putTask = [ossClient putObject:put];
                     [putTask waitUntilFinished]; // 阻塞直到上传完成
                     if (!putTask.error) {

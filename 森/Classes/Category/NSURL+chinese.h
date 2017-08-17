@@ -10,4 +10,6 @@
 
 @interface NSURL (chinese)
 
++ (instancetype)xx_URLWithString:(NSString *)url;
+
 @end
