@@ -57,7 +57,6 @@
             NSMutableArray *temp = [NSMutableArray array];
             for (NSDictionary *dict in result.data[@"sign_list"]) {
                 PayList *paylist = [PayList mj_objectWithKeyValues:dict];
-                Log(@"%ld___________>%@",paylist.sign_type,paylist.order_sign_pic);
                 ItemGroup *group = [[ItemGroup alloc] init];
                 group.items = @[paylist];
                 // 1 中款 2尾款 3附加款 4尾款时间 5首款

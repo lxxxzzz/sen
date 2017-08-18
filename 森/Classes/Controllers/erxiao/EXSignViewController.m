@@ -82,8 +82,9 @@
         self.payTimeItem = [BaseItem itemWithTitle:@"支付时间" value:@"" required:NO];
     } else {
         // 可以编辑
-        TextFieldItem *totalMoneyItem = [TextFieldItem itemWithTitle:title value:@"0" required:YES];
+        TextFieldItem *totalMoneyItem = [TextFieldItem itemWithTitle:title value:nil required:YES];
         totalMoneyItem.keyboardType = UIKeyboardTypeNumberPad;
+        totalMoneyItem.placeholder = @"请输入金额";
         self.totalMoneyItem = totalMoneyItem;
 
         self.payTimeItem = [BaseItem itemWithTitle:@"支付时间" value:[NSString nowDateWithTimeFormat:@"yyyy-MM-dd"] required:YES];

@@ -136,6 +136,7 @@
     parameters[@"sign_type"] = @"4";
     parameters[@"user_dajian_order_id"] = self.order_id;
     parameters[@"order_time"] = @([self.timeItem.value integerValue]);
+    Log(@"%@   \n%@",parameters, url);
     @weakObj(self);
     [HTTPTool POST:url parameters:parameters success:^(HTTPResult *result) {
         @strongObj(self)
