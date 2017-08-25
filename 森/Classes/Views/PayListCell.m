@@ -92,7 +92,7 @@ static NSString *const kImageCellID = @"kImageCellID";
     NSTimeInterval other_item_weikuan_old_time = [paylist.other_item_weikuan_old_time doubleValue];
     
     self.titleLabel1.text = @"合同金额";
-    self.titleLabel2.text = @"尾款时间";
+    self.titleLabel2.text = @"举办时间";
     self.titleLabel3.text = @"首款金额";
     self.titleLabel4.text = @"首款时间";
     self.valueLabel1.text = paylist.order_money;

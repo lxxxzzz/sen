@@ -74,7 +74,8 @@
     
     if (!self.editable) {
         // 不可以编辑
-        self.holdingTimeItem = [BaseItem itemWithTitle:@"尾款时间" value:date required:NO];
+//        self.holdingTimeItem = [BaseItem itemWithTitle:@"尾款时间" value:date required:NO];
+        self.holdingTimeItem = [BaseItem itemWithTitle:@"举办时间" value:date required:NO];
         self.totalMoneyItem = [BaseItem itemWithTitle:@"合同金额" value:@"" required:NO];
         self.firstPayMoneyItem = [BaseItem itemWithTitle:@"首款金额" value:@"" required:NO];
         self.firstPayTimeItem = [BaseItem itemWithTitle:@"首款时间" value:@"" required:NO];
@@ -82,8 +83,10 @@
         
     } else {
         // 可以编辑
-        ArrowItem *holdingTimeItem = [ArrowItem itemWithTitle:@"尾款时间" subTitle:nil required:NO];
-        holdingTimeItem.placeholder = @"请选择尾款时间";
+//        ArrowItem *holdingTimeItem = [ArrowItem itemWithTitle:@"尾款时间" subTitle:nil required:NO];
+//        holdingTimeItem.placeholder = @"请选择尾款时间";
+        ArrowItem *holdingTimeItem = [ArrowItem itemWithTitle:@"举办时间" subTitle:nil required:NO];
+        holdingTimeItem.placeholder = @"请选择举办时间";
         __weak typeof(holdingTimeItem) weakHoldingTimeItem = holdingTimeItem;
         holdingTimeItem.task = ^{
             [weakSelf.dateKeyboardView show];
@@ -196,7 +199,7 @@
         return;
     }
     if (self.holdingTimeItem.value == 0) {
-        [SVProgressHUD showErrorWithStatus:@"请选择尾款时间"];
+        [SVProgressHUD showErrorWithStatus:@"请选择举办时间"];
         return;
     }
     

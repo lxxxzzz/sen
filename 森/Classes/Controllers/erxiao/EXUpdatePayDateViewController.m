@@ -89,7 +89,7 @@
 
 #pragma mark - 私有方法
 - (void)setupNavigationItem {
-    self.navigationItem.title = @"申请修改尾款时间";
+    self.navigationItem.title = @"申请修改举办时间";
 }
 
 - (void)loadData {

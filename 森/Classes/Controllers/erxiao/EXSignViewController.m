@@ -63,18 +63,21 @@
     self.isFirstLoadView = YES;
     
     self.group1 = [[ItemGroup alloc] init];
-    self.group1.header = @"中款明细";
-    NSString *title = nil;
+    
+    
+    NSString *header = nil;
     // 1 中款 2尾款 3附加款 4尾款时间
     if ([self.sign_type isEqualToString:@"1"]) {
-        title = @"中款金额";
+        header = @"中款";
     } else if ([self.sign_type isEqualToString:@"2"]) {
-        title = @"尾款金额";
+        header = @"尾款";
     } else if ([self.sign_type isEqualToString:@"3"]) {
-        title = @"附加款金额";
+        header = @"附加款";
     } else if ([self.sign_type isEqualToString:@"4"]) {
-        title = @"修改尾款时间";
+        header = @"修改举办";
     }
+    NSString *title = [NSString stringWithFormat:@"%@金额",header];
+    self.group1.header = [NSString stringWithFormat:@"%@明细",header];
     
     if (!self.editable) {
         // 不可以编辑
@@ -95,7 +98,7 @@
                           self.payTimeItem
                           ];
     self.group2 = [[ItemGroup alloc] init];
-    self.group2.header = @"中款凭证";
+    self.group2.header = [NSString stringWithFormat:@"%@凭证",header];
     self.group2.items = @[@"占位字符"];
     
     self.dataSource = @[self.group1, self.group2];

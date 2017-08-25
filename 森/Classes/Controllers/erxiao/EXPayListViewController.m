@@ -67,7 +67,7 @@
                 } else if (paylist.sign_type == 3) {
                     group.header = @"附加款明细与凭证";
                 } else if (paylist.sign_type == 4) {
-                    group.header = @"修改尾款时间";
+                    group.header = @"修改举办时间";
                     paylist.order_sign_pic = @[];
                 } else if (paylist.sign_type == 5) {
                     group.header = @"首款明细与凭证";

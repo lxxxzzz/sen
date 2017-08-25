@@ -162,7 +162,7 @@
                 Option *option1 = [Option optionWithTitle:@"中款支付" value:@"1"];
                 Option *option2 = [Option optionWithTitle:@"尾款支付" value:@"2"];
                 Option *option3 = [Option optionWithTitle:@"附加款支付" value:@"3"];
-                Option *option4 = [Option optionWithTitle:@"申请更改尾款时间" value:@"4"];
+                Option *option4 = [Option optionWithTitle:@"申请更改举办时间" value:@"4"];
                 
                 NSArray *dataSource;
                 // 判断中款是否已支付

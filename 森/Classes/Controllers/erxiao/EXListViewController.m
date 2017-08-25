@@ -42,6 +42,7 @@
 }
 
 - (void)loadNewDataWithStatus:(NSString *)status orderPage:(NSInteger)page success:(void (^)(NSArray *,NSInteger))success failure:(void (^)())failure {
+    if (TOKEN == nil) return;
     if ([status isEqualToString:@"4"]) {
         status = @"5"; // 没有状态4  驳回是5
     }
