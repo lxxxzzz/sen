@@ -92,7 +92,11 @@
 
         self.payTimeItem = [BaseItem itemWithTitle:@"支付时间" value:[NSString nowDateWithTimeFormat:@"yyyy-MM-dd"] required:YES];
     }
-    [self loadData];
+    
+    if (self.sign_type == nil) {
+        [self loadData];
+    }
+    
     self.group1.items = @[
                           self.totalMoneyItem,
                           self.payTimeItem
@@ -183,7 +187,7 @@
             if ([result.data isKindOfClass:[NSDictionary class]]) {
                 self.group1.header = result.data[@"title"];
                 self.group2.header = result.data[@"third_input_note"];
-                
+
                 if (!self.editable || self.order.order_status == OrderStatusYibohui) {
                     // 不可以编辑
                     self.totalMoneyItem.value = result.data[@"first_input_content"];
