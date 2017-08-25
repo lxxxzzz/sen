@@ -85,7 +85,7 @@
                     } else if (order.erxiao_sign_type == 3) {
                         order.erxiao_status = @"附加款";
                     } else if (order.erxiao_sign_type == 4) {
-                        order.erxiao_status = @"尾款时间修改";
+                        order.erxiao_status = @"举办时间修改";
                     }
                     
                     [orders addObject:order];
