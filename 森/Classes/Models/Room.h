@@ -19,4 +19,6 @@
 @property (nonatomic, copy) NSString *room_best_desk;
 @property (nonatomic, copy) NSString *room_m;
 
+- (NSArray *)getEncodingImages;
+
 @end

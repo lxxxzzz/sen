@@ -47,7 +47,7 @@
         make.size.mas_equalTo(CGSizeMake(30, 30));
     }];
     
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)imageURLStringsGroup:self.room.room_image];
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)imageURLStringsGroup:self.room.getEncodingImages];
     cycleScrollView.delegate = self;
     cycleScrollView.autoScroll = NO;
     cycleScrollView.infiniteLoop = NO;

@@ -7,7 +7,17 @@
 //
 
 #import "Room.h"
+#import "NSURL+chinese.h"
 
 @implementation Room
+
+- (NSArray *)getEncodingImages {
+    NSMutableArray *encodingArray = [NSMutableArray array];
+    for (NSString *url in self.room_image) {
+        NSURL *encodeingURL = [NSURL xx_URLWithString:url];
+        [encodingArray addObject:encodeingURL];
+    }
+    return encodingArray;
+}
 
 @end

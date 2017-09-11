@@ -18,6 +18,10 @@
 }
 
 + (instancetype)xx_URLWithString:(NSString *)url {
+    if (url == nil || [url isKindOfClass:[NSNull class]]) {
+        return nil;
+    }
+    
     NSString *encodedString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     return [self URLWithString:encodedString];
 }
