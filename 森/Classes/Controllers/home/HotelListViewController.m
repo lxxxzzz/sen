@@ -177,7 +177,7 @@
     [self.refreshView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.centerY.mas_equalTo(self.view.mas_centerY);
-        make.size.mas_equalTo(CGSizeMake(190, 35));
+        make.size.mas_equalTo(CGSizeMake(210, 35));
     }];
 }
 
@@ -473,7 +473,7 @@
 - (RefreshView *)refreshView {
     if (_refreshView == nil) {
         _refreshView = [RefreshView refreshView];
-        _refreshView.title = @"网络连接失败，重新加载";
+        _refreshView.title = @"网络开了小差，点击重新加载";
         _refreshView.hidden = YES;
         __weak typeof(self) weakSelf = self;
         
