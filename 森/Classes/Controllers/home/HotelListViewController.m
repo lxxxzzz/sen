@@ -37,6 +37,7 @@
 #import <Masonry.h>
 #import <MJExtension.h>
 #import <SVProgressHUD.h>
+#import <AFNetworking.h>
 
 @interface HotelListViewController () <UITableViewDelegate, UITableViewDataSource, DropdownDelegate, AreaViewControllerDelegate, DropdownMenuDelegate>
 
@@ -49,6 +50,9 @@
 @property (nonatomic, strong) UILabel *messageLabel;
 @property (nonatomic, strong) Option *selectedOption;
 @property (nonatomic, strong) DropdownMenu *dropdownMenu;
+@property (nonatomic, strong) RefreshView *refreshView;
+@property (nonatomic, strong) NSTimer *timer;
+
 
 @end
 
@@ -142,6 +146,7 @@
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.recommend];
     [self.view addSubview:self.messageLabel];
+    [self.view addSubview:self.refreshView];
     
     [self.dropdownMenu mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_top).mas_offset(64);
@@ -167,6 +172,12 @@
     [self.messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.centerY.mas_equalTo(self.view.mas_centerY);
+    }];
+    
+    [self.refreshView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view.mas_centerX);
+        make.centerY.mas_equalTo(self.view.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(190, 35));
     }];
 }
 
@@ -321,6 +332,8 @@
     [self.tableView reloadData];
     [HTTPTool POST:url parameters:parameters success:^(HTTPResult *result) {
         Log(@"%@",result);
+        self.refreshView.hidden = YES;
+        [self.refreshView endRefresh];
         if (result.success) {
             if ([result.data count]) {
                 weakself.dataSource = [Hotel mj_objectArrayWithKeyValuesArray:result.data];
@@ -333,6 +346,8 @@
         [SVProgressHUD dismiss];
         [self.tableView reloadData];
     } failure:^(NSError *error) {
+        self.refreshView.hidden = NO;
+        [self.refreshView endRefresh];
         [SVProgressHUD dismiss];
         [self.tableView reloadData];
     }];
@@ -350,6 +365,8 @@
     [self.tableView reloadData];
     [HTTPTool POST:url parameters:parameters success:^(HTTPResult *result) {
         Log(@"%@",result);
+        self.refreshView.hidden = YES;
+        [self.refreshView endRefresh];
         if (result.success) {
             if ([result.data count]) {
                 weakself.dataSource = [Hotel mj_objectArrayWithKeyValuesArray:result.data];
@@ -362,6 +379,8 @@
         [SVProgressHUD dismiss];
         [self.tableView reloadData];
     } failure:^(NSError *error) {
+        self.refreshView.hidden = NO;
+        [self.refreshView endRefresh];
         [SVProgressHUD dismiss];
         [self.tableView reloadData];
     }];
@@ -449,6 +468,29 @@
         _messageLabel.hidden = YES;
     }
     return _messageLabel;
+}
+    
+- (RefreshView *)refreshView {
+    if (_refreshView == nil) {
+        _refreshView = [RefreshView refreshView];
+        _refreshView.title = @"网络连接失败，重新加载";
+        _refreshView.hidden = YES;
+        __weak typeof(self) weakSelf = self;
+        
+        [_refreshView setOnClickBlock:^{
+            [weakSelf loadAllData];
+            
+            [weakSelf loadAreaData];
+        }];
+    }
+    return _refreshView;
+}
+
+- (NSTimer *)timer {
+    if (_timer == nil) {
+        _timer = [[NSTimer alloc] init];
+    }
+    return _timer;
 }
 
 @end

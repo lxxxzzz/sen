@@ -949,7 +949,7 @@
 				TargetAttributes = {
 					9BFD10D81E82AAB900696B24 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2YE2UXN6E6;
+						DevelopmentTeam = 2WPQ52VK3B;
 						ProvisioningStyle = Automatic;
 					};
 					9BFD10F11E82AABA00696B24 = {
@@ -1332,7 +1332,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YE2UXN6E6;
+				DEVELOPMENT_TEAM = 2WPQ52VK3B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/森/PrefixHeader.pch";
 				INFOPLIST_FILE = "森/Info.plist";
@@ -1352,7 +1352,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YE2UXN6E6;
+				DEVELOPMENT_TEAM = 2WPQ52VK3B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/森/PrefixHeader.pch";
 				INFOPLIST_FILE = "森/Info.plist";
