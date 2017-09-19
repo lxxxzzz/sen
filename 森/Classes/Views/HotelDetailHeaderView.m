@@ -8,6 +8,7 @@
 
 #import "HotelDetailHeaderView.h"
 #import "Hotel.h"
+#import "NSURL+chinese.h"
 #import <SDCycleScrollView.h>
 #import <Masonry.h>
 
@@ -56,8 +57,10 @@
     // 解决url中文
     NSMutableArray *urls = [NSMutableArray array];
     for (NSString *str in hotel.hotel_images) {
-        NSString *encodedString = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        [urls addObject:encodedString];
+        NSURL *url = [NSURL xx_URLWithString:str];
+        if (url) {
+            [urls addObject:url];
+        }
     }
     
     self.cycleScrollView.imageURLStringsGroup = urls;
