@@ -358,11 +358,12 @@
     NSString *url = [NSString stringWithFormat:@"%@?m=app&c=user&f=mainList", HOST];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"list_type"] = @"2";
-    parameters[@"area_sh_id"] = self.area_sh_id.value;
-    parameters[@"hotel_type"] = self.hotel_type.value;
+    parameters[@"area_sh_id"] = self.area_sh_id.value == nil ? @"20" : self.area_sh_id.value;
+    parameters[@"hotel_type"] = self.hotel_type.value == nil ? @"1" : self.hotel_type.value;
     [SVProgressHUD showWithStatus:@"加载中..."];
     self.dataSource = @[];
     [self.tableView reloadData];
+    Log(@"%@",parameters);
     [HTTPTool POST:url parameters:parameters success:^(HTTPResult *result) {
         Log(@"%@",result);
         self.refreshView.hidden = YES;
