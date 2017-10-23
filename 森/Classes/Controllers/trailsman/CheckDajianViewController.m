@@ -45,7 +45,7 @@
             [weakSelf.tableView reloadData];
         };
     };
-    self.phone = [TextFieldItem itemWithTitle:@"手机号" placeholder:@"请输入您的手机号" keyboardType:UIKeyboardTypeNumberPad required:YES];
+    self.phone = [TextFieldItem itemWithTitle:@"手机号" placeholder:@"请输入受访者的手机号" keyboardType:UIKeyboardTypeNumberPad required:YES];
     self.dataSource = @[self.type, self.phone];
     [self.tableView reloadData];
 }
