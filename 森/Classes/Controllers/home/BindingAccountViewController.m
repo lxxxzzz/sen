@@ -264,9 +264,29 @@
     return 23.f;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+//- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+//    ItemGroup *group = self.dataSource[section];
+//    return group.footer;
+//}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *footer = [[UIView alloc] init];
+    UILabel *label = [[UILabel alloc] init];
     ItemGroup *group = self.dataSource[section];
-    return group.footer;
+    label.text = group.footer;
+    label.textColor = [UIColor grayColor];
+    label.font = FONT(13);
+    label.numberOfLines = 0;
+    [label sizeToFit];
+    CGRect rect = label.bounds;
+    CGRect footerRect = rect;
+    footerRect.size.height += 20;
+    footer.frame = footerRect;
+    rect.origin.x = 10;
+    rect.origin.y = 10;
+    label.frame = rect;
+    [footer addSubview:label];
+    return footer;
 }
 
 #pragma mark UITableViewDelegate
@@ -307,7 +327,7 @@
         __weak typeof(self) weakSelf = self;
         ItemGroup *group1 = [[ItemGroup alloc] init];
         
-        TextFieldItem *alipay = [TextFieldItem itemWithTitle:@"支付宝" placeholder:@"请输入支付宝账号" required:YES];
+        TextFieldItem *alipay = [TextFieldItem itemWithTitle:@"支付宝" placeholder:@"支付宝账户，姓名（必填）" required:YES];
         alipay.textAlignment = NSTextAlignmentRight;
         alipay.valueDidChange = ^(id value){
             weakSelf.alipay = value;
@@ -401,7 +421,7 @@
         }
         
         
-        group1.footer = @"只有绑定账号，才能提成哦";
+        group1.footer = @"1.支付宝格式：10000@qq.com，张三丰\n2.只有绑定账号，才能提成哦";
         
         _dataSource = @[group1];
     }
