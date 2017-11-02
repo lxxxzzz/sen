@@ -282,7 +282,7 @@
         self.hotelItem = [ArrowItem itemWithTitle:@"酒店" subTitle:nil required:YES];
         self.hotelItem.placeholder = @"请选择跟踪方酒店";
         NSArray <Option *>*options = @[[Option optionWithTitle:@"指定区域" value:@"1"],
-                                       [Option optionWithTitle:@"指定酒店" value:@"2"]];
+                                       [Option optionWithTitle:@"指定酒店（最多选中三家）" value:@"2"]];
         self.areaItem = [ArrowItem itemWithTitle:@"指定位置" subTitle:nil required:YES];
         self.areaItem.placeholder = options[1].title;
         self.areaItem.value = options[1].value;
