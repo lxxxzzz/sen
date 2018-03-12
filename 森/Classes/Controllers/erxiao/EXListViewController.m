@@ -28,13 +28,12 @@
     [super viewDidLoad];
     
     self.titles = @[@"待处理", @"待审核", @"已完结", @"已驳回"];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self reloadData];
+//    [self reloadData];
 }
 
 - (void)loadMoreData {
@@ -75,7 +74,6 @@
                         
                     } else if (order.order_status == 5) {
                         order.status = OrderStatusYibohui;
-                        
                     }
                     
                     if (order.erxiao_sign_type == 1) {

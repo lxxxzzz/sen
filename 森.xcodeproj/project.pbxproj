@@ -10,6 +10,7 @@
 		040E9FB81F415E5E00D38C29 /* NSURL+chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FB71F415E5E00D38C29 /* NSURL+chinese.m */; };
 		0415AB911F44278F00F6C393 /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0415AB901F44278F00F6C393 /* EasterEggViewController.m */; };
 		0415AB971F44359B00F6C393 /* HostTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0415AB961F44359B00F6C393 /* HostTool.m */; };
+		04219E9B205613B8005AAB8A /* NSString+Sign.m in Sources */ = {isa = PBXBuildFile; fileRef = 04219E99205613B7005AAB8A /* NSString+Sign.m */; };
 		0449655D1F2F1FF900FC90DB /* HistorySearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0449655C1F2F1FF900FC90DB /* HistorySearchCell.m */; };
 		9B00C0E31F19BA8F006D7B4E /* PaymentRecordsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B00C0E21F19BA8F006D7B4E /* PaymentRecordsCell.m */; };
 		9B00C0E61F19E71E006D7B4E /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B00C0E51F19E71E006D7B4E /* NavigationViewController.m */; };
@@ -163,6 +164,8 @@
 		0415AB901F44278F00F6C393 /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
 		0415AB951F44359B00F6C393 /* HostTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostTool.h; sourceTree = "<group>"; };
 		0415AB961F44359B00F6C393 /* HostTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostTool.m; sourceTree = "<group>"; };
+		04219E99205613B7005AAB8A /* NSString+Sign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Sign.m"; sourceTree = "<group>"; };
+		04219E9A205613B7005AAB8A /* NSString+Sign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Sign.h"; sourceTree = "<group>"; };
 		0449655B1F2F1FF900FC90DB /* HistorySearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistorySearchCell.h; sourceTree = "<group>"; };
 		0449655C1F2F1FF900FC90DB /* HistorySearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistorySearchCell.m; sourceTree = "<group>"; };
 		2E8D421FB715F28C164979EF /* Pods-森.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-森.release.xcconfig"; path = "Pods/Target Support Files/Pods-森/Pods-森.release.xcconfig"; sourceTree = "<group>"; };
@@ -733,6 +736,8 @@
 		9BFD11181E82AE3000696B24 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				04219E9A205613B7005AAB8A /* NSString+Sign.h */,
+				04219E99205613B7005AAB8A /* NSString+Sign.m */,
 				9BF8C93F1E895CE600C8E567 /* Foundation+Log.m */,
 				9BFD11191E82AE4E00696B24 /* UIColor+Extension.h */,
 				9BFD111A1E82AE4E00696B24 /* UIColor+Extension.m */,
@@ -1084,6 +1089,7 @@
 				9BFDABBE1E968BB300089E09 /* TextFieldItem.m in Sources */,
 				9B695EA71EC00DE800EC1B4D /* Album.m in Sources */,
 				9B5C92A11ED823B10082BEA3 /* CreateDajianViewController.m in Sources */,
+				04219E9B205613B8005AAB8A /* NSString+Sign.m in Sources */,
 				9B22C31B1ED2DC6F007911C9 /* HotelDetailHeaderView.m in Sources */,
 				9BF8C94C1E93E17A00C8E567 /* FeedbackSuccessView.m in Sources */,
 				0449655D1F2F1FF900FC90DB /* HistorySearchCell.m in Sources */,

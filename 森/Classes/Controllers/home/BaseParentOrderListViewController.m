@@ -44,6 +44,14 @@
     }];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (self.willAppearAction) {
+        self.willAppearAction();
+    }
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     

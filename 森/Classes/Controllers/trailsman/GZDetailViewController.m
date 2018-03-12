@@ -131,6 +131,9 @@
                             break;
                         }
                     }
+                    
+                    [listVc reloadData];
+                    
                     // 5是已取消
                     listVc.segmentControl.selectedIndex = 5;
                 }

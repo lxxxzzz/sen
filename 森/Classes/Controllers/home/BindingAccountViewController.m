@@ -31,6 +31,7 @@
 @property (nonatomic, strong) UIBarButtonItem *rightButtonItem;
 
 @property (nonatomic, copy) NSString *alipay;
+@property (nonatomic, copy) NSString *alipayName;
 @property (nonatomic, strong) ArrowItem *accountTypeItem;
 @property (nonatomic, strong) TextFieldItem *bankItem;
 @property (nonatomic, strong) TextFieldItem *userNameItem;
@@ -149,6 +150,7 @@
     if ([self.accountTypeItem.value isEqualToString:@"1"]) {
         // 1、支付宝
         parameters[@"alipay"] = self.alipay;
+        parameters[@"zfb_name"] = self.alipayName;
     } else {
         parameters[@"bank_name"] = self.bankItem.value;
         parameters[@"bank_user"] = self.userNameItem.value;
@@ -198,7 +200,6 @@
     BOOL enable = YES;
     for (ItemGroup *group in _dataSource) {
         for (BaseItem *item in group.items) {
-            Log(@"%@  %d   %@",item.title, item.isRequired, item.value);
             if (item.isRequired) {
                 if (item.value == nil || [item.value length] == 0) {
                     enable = NO;
@@ -327,13 +328,19 @@
         __weak typeof(self) weakSelf = self;
         ItemGroup *group1 = [[ItemGroup alloc] init];
         
-        TextFieldItem *alipay = [TextFieldItem itemWithTitle:@"支付宝" placeholder:@"支付宝账户，姓名（必填）" required:YES];
+        TextFieldItem *alipay = [TextFieldItem itemWithTitle:@"支付宝账号" placeholder:@"支付宝账户（必填）" required:YES];
         alipay.textAlignment = NSTextAlignmentRight;
         alipay.valueDidChange = ^(id value){
             weakSelf.alipay = value;
-            weakSelf.rightButtonItem.enabled = [value length];
+            weakSelf.rightButtonItem.enabled = [weakSelf.alipayName length] && [weakSelf.alipay length];
         };
         
+        TextFieldItem *alipayName = [TextFieldItem itemWithTitle:@"姓名" placeholder:@"支付宝姓名（必填）" required:YES];
+        alipayName.textAlignment = NSTextAlignmentRight;
+        alipayName.valueDidChange = ^(id value){
+            weakSelf.alipayName = value;
+            weakSelf.rightButtonItem.enabled = [weakSelf.alipayName length] && [weakSelf.alipay length];
+        };
         // 开户银行
         self.bankItem = [TextFieldItem itemWithTitle:@"开户银行" placeholder:@"请输入开户行名称" required:YES];
         self.bankItem.textAlignment = NSTextAlignmentRight;
@@ -401,7 +408,7 @@
                 weakAccountTypeItem.value = option.value;
                 if ([option.value isEqualToString:@"1"]) {
                     // 支付宝账号
-                    group1.items = @[weakAccountTypeItem, alipay];
+                    group1.items = @[weakAccountTypeItem, alipay, alipayName];
                 } else {
                     // 银行卡账号
                     group1.items = @[weakAccountTypeItem, weakSelf.bankItem, weakSelf.userNameItem, weakSelf.accountItem];
@@ -414,14 +421,14 @@
         
         if ([self.accountTypeItem.value isEqualToString:@"1"]) {
             // 支付宝账号
-            group1.items = @[weakSelf.accountTypeItem, alipay];
+            group1.items = @[weakSelf.accountTypeItem, alipay, alipayName];
         } else {
             // 银行卡
             group1.items = @[weakSelf.accountTypeItem, self.bankItem, self.userNameItem, self.accountItem];
         }
         
         
-        group1.footer = @"1.支付宝格式：10000@qq.com，张三丰\n2.只有绑定账号，才能提成哦";
+        group1.footer = @"1.只有绑定账号，才能提成哦";
         
         _dataSource = @[group1];
     }

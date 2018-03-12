@@ -222,14 +222,16 @@
             [SVProgressHUD showSuccessWithStatus:@"签单成功"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 NSArray *controllers = self.navigationController.viewControllers;
-                UIViewController *popVc;
+                EXListViewController *popVc;
                 for (UIViewController *vc in controllers) {
                     if ([vc isKindOfClass:[EXListViewController class]]) {
-                        popVc = vc;
+                        popVc = (EXListViewController *)vc;
                         break;
                     }
                 }
                 if (popVc) {
+                    [popVc reloadData];
+                    
                     [weakself.navigationController popToViewController:popVc animated:YES];
                 } else {
                     [weakself.navigationController popToRootViewControllerAnimated:YES];

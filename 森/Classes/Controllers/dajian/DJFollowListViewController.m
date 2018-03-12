@@ -27,7 +27,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self reloadData];
+//    [self reloadData];
 }
 
 #pragma mark - 私有方法

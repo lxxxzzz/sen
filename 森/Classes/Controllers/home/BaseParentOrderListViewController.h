@@ -29,6 +29,8 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) RefreshView *refreshView;
 @property (nonatomic, strong) NSArray <NSString *>*titles;
+@property (nonatomic, copy) void(^backAction)();
+@property (nonatomic, copy) void(^willAppearAction)();
 
 - (void)reloadData;
 

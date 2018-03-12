@@ -34,7 +34,12 @@
     if (self.viewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = hide;
         // 设置导航栏按钮
-        viewController.navigationItem.leftBarButtonItem = [self itemWithImageName:@"icons_back_white" highImageName:@"icons_back_white" target:self action:@selector(back)];
+        
+        if ([viewController respondsToSelector:@selector(back)]) {
+            viewController.navigationItem.leftBarButtonItem = [self itemWithImageName:@"icons_back_white" highImageName:@"icons_back_white" target:viewController action:@selector(back)];
+        } else {
+            viewController.navigationItem.leftBarButtonItem = [self itemWithImageName:@"icons_back_white" highImageName:@"icons_back_white" target:self action:@selector(back)];
+        }
     }
     [super pushViewController:viewController animated:animated];
 }

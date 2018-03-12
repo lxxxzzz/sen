@@ -29,8 +29,6 @@
     [self setupChildVc];
     
     [self setupNavigationItem];
-    
-    Log(@"%@",TOKEN);
 }
 
 - (void)dealloc {

@@ -49,7 +49,7 @@
     // 设置状态栏文字颜色为白色
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
-    [self reloadData];
+//    [self reloadData];
 }
 
 - (void)dealloc {

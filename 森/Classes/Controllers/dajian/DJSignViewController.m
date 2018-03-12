@@ -330,6 +330,8 @@
                 if (popVc) {
                     popVc.segmentControl.selectedIndex = 1;
                     
+                    [popVc reloadData];
+                    
                     [weakself.navigationController popToViewController:popVc animated:YES];
                 } else {
                     [weakself.navigationController popToRootViewControllerAnimated:YES];

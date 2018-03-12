@@ -28,7 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self reloadData];
+//    [self reloadData];
 }
 
 - (void)setupNavigationItem {
