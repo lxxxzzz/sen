@@ -27,6 +27,9 @@
     param[@"APP-DEVICE"] = APP_DEVICE;
     param[@"APP-TIME"] = APP_TIME;
     param[@"APP-SIGN"] = [NSString md5:[NSString stringWithFormat:@"sen%@%@",APP_DEVICE, APP_TIME]];
+    if (!param[@"version"]) {
+        param[@"version"] = @"1.0";
+    }
     [manager GET:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         HTTPResult *result = [HTTPResult resultWithDict:responseObject];
         if (result.status == 997) {
@@ -50,6 +53,9 @@
     param[@"APP-DEVICE"] = APP_DEVICE;
     param[@"APP-TIME"] = APP_TIME;
     param[@"APP-SIGN"] = [NSString md5:[NSString stringWithFormat:@"sen%@%@",APP_DEVICE, APP_TIME]];
+    if (!param[@"version"]) {
+        param[@"version"] = @"1.0";
+    }
     [manager POST:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         HTTPResult *result = [HTTPResult resultWithDict:responseObject];
         if (result.status == 997) {

@@ -11,9 +11,9 @@
 
 @interface HTTPTool : NSObject
 
-+ (void)GET:(NSString *)url
-    success:(void(^)(HTTPResult *result))success
-    failure:(void(^)(NSError *error))failure;
+//+ (void)GET:(NSString *)url
+//    success:(void(^)(HTTPResult *result))success
+//    failure:(void(^)(NSError *error))failure;
 + (void)GET:(NSString *)url
  parameters:(NSDictionary *)parameters
     success:(void(^)(HTTPResult *result))success
