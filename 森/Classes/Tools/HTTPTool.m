@@ -12,25 +12,25 @@
 #import <AFNetworking.h>
 
 #define APP_DEVICE [UIDevice currentDevice].identifierForVendor.UUIDString
-#define APP_TIME @((int)[NSDate date].timeIntervalSince1970)
+//#define APP_TIME @((int)[NSDate date].timeIntervalSince1970)
+#define APP_TIME [NSString stringWithFormat:@"%lld", [NSDate date].timeIntervalSince1970]
 
 @implementation HTTPTool
 
 + (void)GET:(NSString *)url success:(void (^)(HTTPResult *))success failure:(void (^)(NSError *))failure {
+    
     [self GET:url parameters:nil success:success failure:failure];
 }
 
 + (void)GET:(NSString *)url parameters:(NSDictionary *)parameters success:(void (^)(HTTPResult *))success failure:(void (^)(NSError *))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
-    NSMutableDictionary *param = [parameters mutableCopy];
-    param[@"APP-DEVICE"] = APP_DEVICE;
-    param[@"APP-TIME"] = APP_TIME;
-    param[@"APP-SIGN"] = [NSString md5:[NSString stringWithFormat:@"sen%@%@",APP_DEVICE, APP_TIME]];
-    if (!param[@"version"]) {
-        param[@"version"] = @"1.0";
-    }
-    [manager GET:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:APP_DEVICE forHTTPHeaderField:@"APP-DEVICE"];
+    [manager.requestSerializer setValue:APP_TIME forHTTPHeaderField:@"APP-TIME"];
+    [manager.requestSerializer setValue:[NSString md5:[NSString stringWithFormat:@"sen%@%@",APP_DEVICE, APP_TIME]] forHTTPHeaderField:@"APP-SIGN"];
+    [manager.requestSerializer setValue:@"1.0" forHTTPHeaderField:@"version"];
+    [manager GET:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         HTTPResult *result = [HTTPResult resultWithDict:responseObject];
         if (result.status == 997) {
             // 登录过期
@@ -49,14 +49,14 @@
 + (void)POST:(NSString *)url parameters:(NSDictionary *)parameters success:(void (^)(HTTPResult *))success failure:(void (^)(NSError *))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
-    NSMutableDictionary *param = [parameters mutableCopy];
-    param[@"APP-DEVICE"] = APP_DEVICE;
-    param[@"APP-TIME"] = APP_TIME;
-    param[@"APP-SIGN"] = [NSString md5:[NSString stringWithFormat:@"sen%@%@",APP_DEVICE, APP_TIME]];
-    if (!param[@"version"]) {
-        param[@"version"] = @"1.0";
-    }
-    [manager POST:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:APP_DEVICE forHTTPHeaderField:@"APP-DEVICE"];
+    [manager.requestSerializer setValue:APP_TIME forHTTPHeaderField:@"APP-TIME"];
+    [manager.requestSerializer setValue:[NSString md5:[NSString stringWithFormat:@"sen%@%@",APP_DEVICE, APP_TIME]] forHTTPHeaderField:@"APP-SIGN"];
+    [manager.requestSerializer setValue:@"1.0" forHTTPHeaderField:@"version"];
+    
+    [manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         HTTPResult *result = [HTTPResult resultWithDict:responseObject];
         if (result.status == 997) {
             // 登录过期

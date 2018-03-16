@@ -324,7 +324,7 @@
 
 - (void)loadAllData {
     __weak typeof(self) weakself = self;
-    NSString *url = [NSString stringWithFormat:@"%@?m=app&c=user&f=mainList", HOST];
+    NSString *url = [NSString stringWithFormat:@"%@?m=app&c=user&f=mainList&debug=1", HOST];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"list_type"] = @"1";
     [SVProgressHUD showWithStatus:@"加载中..."];
@@ -374,7 +374,7 @@
                 self.messageLabel.hidden = YES;
             } else {
                 self.messageLabel.hidden = NO;
-//                self.messageLabel.text = [NSString stringWithFormat:@"%@下暂无酒店信息", self.area_sh_id.title];
+                self.messageLabel.text = [NSString stringWithFormat:@"%@下暂无酒店信息", self.area_sh_id.title];
             }
         }
         [SVProgressHUD dismiss];
