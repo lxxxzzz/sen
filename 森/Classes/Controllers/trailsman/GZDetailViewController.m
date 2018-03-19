@@ -213,23 +213,30 @@
                 group2.header = @"信息跟进";
                 
                 ArrowItem *nextItem = [ArrowItem itemWithTitle:@"下次跟进" subTitle:nil required:NO];
-                Option *nextOption1 = [Option optionWithTitle:@"1天后" value:@"1"];
-                Option *nextOption2 = [Option optionWithTitle:@"2天后" value:@"2"];
-                Option *nextOption3 = [Option optionWithTitle:@"3天后" value:@"3"];
-                Option *nextOption4 = [Option optionWithTitle:@"4天后" value:@"4"];
-                Option *nextOption5 = [Option optionWithTitle:@"5天后" value:@"5"];
-                Option *nextOption6 = [Option optionWithTitle:@"6天后" value:@"6"];
-                Option *nextOption7 = [Option optionWithTitle:@"7天后" value:@"7"];
-                Option *nextOption8 = [Option optionWithTitle:@"8天后" value:@"8"];
-                Option *nextOption9 = [Option optionWithTitle:@"9天后" value:@"9"];
-                Option *nextOption10 = [Option optionWithTitle:@"10天后" value:@"10"];
-                nextItem.subTitle = nextOption1.title;
-                nextItem.value = nextOption1.value;
+                NSMutableArray <Option *>*options = [NSMutableArray array];
+                for (int i=1; i<=30; i++) {
+                    NSString *title = [NSString stringWithFormat:@"%d天后", i];
+                    NSString *value = [NSString stringWithFormat:@"%d", i];
+                    Option *option = [Option optionWithTitle:title value:value];
+                    [options addObject:option];
+                }
+//                Option *nextOption1 = [Option optionWithTitle:@"1天后" value:@"1"];
+//                Option *nextOption2 = [Option optionWithTitle:@"2天后" value:@"2"];
+//                Option *nextOption3 = [Option optionWithTitle:@"3天后" value:@"3"];
+//                Option *nextOption4 = [Option optionWithTitle:@"4天后" value:@"4"];
+//                Option *nextOption5 = [Option optionWithTitle:@"5天后" value:@"5"];
+//                Option *nextOption6 = [Option optionWithTitle:@"6天后" value:@"6"];
+//                Option *nextOption7 = [Option optionWithTitle:@"7天后" value:@"7"];
+//                Option *nextOption8 = [Option optionWithTitle:@"8天后" value:@"8"];
+//                Option *nextOption9 = [Option optionWithTitle:@"9天后" value:@"9"];
+//                Option *nextOption10 = [Option optionWithTitle:@"10天后" value:@"10"];
+                nextItem.subTitle = [options firstObject].title;
+                nextItem.value = [options firstObject].value;
                 nextItem.textAlignment = NSTextAlignmentRight;
                 self.nextItem = nextItem;
                 __weak typeof(nextItem) weaknext = nextItem;
                 nextItem.task = ^{
-                    weakSelf.keyboardView.dataSource = @[nextOption1, nextOption2, nextOption3, nextOption4, nextOption5, nextOption6, nextOption7, nextOption8, nextOption9, nextOption10];
+                    weakSelf.keyboardView.dataSource = options;
                     [weakSelf.keyboardView show];
                     weakSelf.keyboardView.didFinishBlock = ^(Option *option){
                         weaknext.subTitle = option.title;

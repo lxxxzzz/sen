@@ -370,6 +370,7 @@
             self.accountTypeItem.subTitle = options[0].title;
             
             alipay.value = ALIPAY_ACCOUNT;
+            alipayName.value = [User sharedUser].zfb_name;
         } else if (BANK_ACCOUNT) {
             // 有设定银行卡号
             self.accountTypeItem.value = options[1].value;

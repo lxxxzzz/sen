@@ -34,6 +34,7 @@
 @property (nonatomic, copy) NSString *hotel_name;
 @property (nonatomic, copy) NSString *area_id;
 @property (nonatomic, copy) NSString *hotel_area;
+@property (nonatomic, copy) NSString *zfb_name;
 
 + (instancetype)userWithDict:(NSDictionary *)dict;
 + (instancetype)sharedUser;

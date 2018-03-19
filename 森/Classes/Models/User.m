@@ -34,6 +34,7 @@ static User *_instance;
         _instance.hotel_area = [defaults objectForKey:@"hotel_area"];
         _instance.bank_name = [defaults objectForKey:@"bank_name"];
         _instance.bank_user = [defaults objectForKey:@"bank_user"];
+        _instance.zfb_name = [defaults objectForKey:@"zfb_name"];
         });
     return _instance;
 }
@@ -63,6 +64,7 @@ static User *_instance;
     _instance.hotel_area = dict[@"hotel_area"];
     _instance.bank_user = dict[@"bank_user"];
     _instance.bank_name = dict[@"bank_name"];
+    _instance.zfb_name = dict[@"zfb_name"];
     [self saveToSandbox];
     return user;
 }
@@ -85,6 +87,7 @@ static User *_instance;
     [defaults removeObjectForKey:@"hotel_area"];
     [defaults removeObjectForKey:@"bank_user"];
     [defaults removeObjectForKey:@"bank_name"];
+    [defaults removeObjectForKey:@"zfb_name"];
     [defaults synchronize];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kUserDidLogoutNotification object:nil];
@@ -109,6 +112,7 @@ static User *_instance;
     [defaults setObject:_instance.hotel_area forKey:@"hotel_area"];
     [defaults setObject:_instance.bank_user forKey:@"bank_user"];
     [defaults setObject:_instance.bank_name forKey:@"bank_name"];
+    [defaults setObject:_instance.zfb_name forKey:@"zfb_name"];
     [defaults synchronize];
 }
 

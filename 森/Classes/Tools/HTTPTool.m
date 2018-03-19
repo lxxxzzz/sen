@@ -25,7 +25,7 @@
 + (void)GET:(NSString *)url parameters:(NSDictionary *)parameters success:(void (^)(HTTPResult *))success failure:(void (^)(NSError *))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [manager.requestSerializer setValue:APP_DEVICE forHTTPHeaderField:@"APP-DEVICE"];
     [manager.requestSerializer setValue:APP_TIME forHTTPHeaderField:@"APP-TIME"];
     [manager.requestSerializer setValue:[NSString md5:[NSString stringWithFormat:@"sen%@%@",APP_DEVICE, APP_TIME]] forHTTPHeaderField:@"APP-SIGN"];
@@ -47,15 +47,16 @@
 }
 
 + (void)POST:(NSString *)url parameters:(NSDictionary *)parameters success:(void (^)(HTTPResult *))success failure:(void (^)(NSError *))failure {
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
 
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [manager.requestSerializer setValue:APP_DEVICE forHTTPHeaderField:@"APP-DEVICE"];
     [manager.requestSerializer setValue:APP_TIME forHTTPHeaderField:@"APP-TIME"];
     [manager.requestSerializer setValue:[NSString md5:[NSString stringWithFormat:@"sen%@%@",APP_DEVICE, APP_TIME]] forHTTPHeaderField:@"APP-SIGN"];
     [manager.requestSerializer setValue:@"1.0" forHTTPHeaderField:@"version"];
-    
+
     [manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         HTTPResult *result = [HTTPResult resultWithDict:responseObject];
         if (result.status == 997) {

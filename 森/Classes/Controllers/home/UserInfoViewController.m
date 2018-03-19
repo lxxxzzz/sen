@@ -182,7 +182,7 @@
                 [User sharedUser].bank_name = nil;
                 [User sharedUser].bank_user = nil;
                 [User sharedUser].alipay_account = accountItem.value;
-                
+                [User sharedUser].zfb_name = result.data[@"my_account"][@"zfb_name"];
 //                weakself.accountItem.title = @"支付宝";
 //                weakself.accountItem.value = result.data[@"my_account"][@"alipay"];
             }
