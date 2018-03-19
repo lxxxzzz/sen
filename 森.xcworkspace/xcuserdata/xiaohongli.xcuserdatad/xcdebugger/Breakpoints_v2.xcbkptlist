@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543138596.681174"
+            timestampString = "543142116.777287"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "367"
-            endingLineNumber = "367"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
             landmarkName = "-loadData"
             landmarkType = "7">
             <Locations>
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/UserInfoViewController.m"
-            timestampString = "543140679.532535"
+            timestampString = "543142116.777369"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
@@ -244,11 +244,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543138596.681904"
+            timestampString = "543142116.777578"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "365"
-            endingLineNumber = "365"
+            startingLineNumber = "368"
+            endingLineNumber = "368"
             landmarkName = "-loadData"
             landmarkType = "7">
          </BreakpointContent>
@@ -260,11 +260,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543138596.6823159"
+            timestampString = "543142116.777637"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "333"
-            endingLineNumber = "333"
+            startingLineNumber = "336"
+            endingLineNumber = "336"
             landmarkName = "-loadAllData"
             landmarkType = "7">
             <Locations>
@@ -372,7 +372,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Tools/HTTPTool.m"
-            timestampString = "543140679.532869"
+            timestampString = "543142116.777854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -388,7 +388,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Tools/HTTPTool.m"
-            timestampString = "543140679.532935"
+            timestampString = "543142116.777918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -404,7 +404,7 @@
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Tools/HTTPTool.m"
-                  timestampString = "543140679.659196"
+                  timestampString = "543142116.863039"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -419,7 +419,7 @@
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Tools/HTTPTool.m"
-                  timestampString = "543140679.661949"
+                  timestampString = "543142116.865001"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
@@ -436,7 +436,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Tools/HTTPTool.m"
-            timestampString = "543140679.532993"
+            timestampString = "543142116.7779731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -484,11 +484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543138596.682963"
+            timestampString = "543142116.778029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "335"
-            endingLineNumber = "335"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
             landmarkName = "-loadAllData"
             landmarkType = "7">
          </BreakpointContent>
@@ -500,11 +500,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543138596.683217"
+            timestampString = "543142116.778084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "428"
-            endingLineNumber = "428"
+            startingLineNumber = "431"
+            endingLineNumber = "431"
             landmarkName = "-dropdownMenu:didSelectOption:"
             landmarkType = "7">
          </BreakpointContent>
@@ -516,61 +516,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543138596.683461"
+            timestampString = "543142116.778139"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "334"
-            endingLineNumber = "334"
+            startingLineNumber = "337"
+            endingLineNumber = "337"
             landmarkName = "-loadAllData"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x68ee;/Classes/Controllers/home/BindingAccountViewController.m"
-            timestampString = "543140679.533118"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "-next"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BindingAccountViewController next]"
-                  moduleName = "&#x68ee;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Controllers/home/BindingAccountViewController.m"
-                  timestampString = "543140679.666146"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
-                  offsetFromSymbolStart = "1480">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[BindingAccountViewController next]_block_invoke"
-                  moduleName = "&#x68ee;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Controllers/home/BindingAccountViewController.m"
-                  timestampString = "543140679.667882"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "47">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -580,11 +532,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/BindingAccountViewController.m"
-            timestampString = "543140679.533174"
+            timestampString = "543142116.778192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "334"
-            endingLineNumber = "334"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
             landmarkName = "-dataSource"
             landmarkType = "7">
          </BreakpointContent>
@@ -596,11 +548,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/BindingAccountViewController.m"
-            timestampString = "543140679.533224"
+            timestampString = "543142116.778529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "333"
-            endingLineNumber = "333"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
             landmarkName = "-dataSource"
             landmarkType = "7">
             <Locations>
@@ -644,11 +596,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/BindingAccountViewController.m"
-            timestampString = "543140679.533271"
+            timestampString = "543142116.7788039"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "-save"
             landmarkType = "7">
             <Locations>
@@ -683,6 +635,54 @@
                   offsetFromSymbolStart = "47">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Controllers/home/UserInfoViewController.m"
+            timestampString = "543142116.779066"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Controllers/home/BindingAccountViewController.m"
+            timestampString = "543142116.779117"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Controllers/home/BindingAccountViewController.m"
+            timestampString = "543142116.7793339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-viewWillDisappear:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

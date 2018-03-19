@@ -140,7 +140,8 @@
 }
 
 - (void)setupSubviews {
-    self.dropdownMenu = [[DropdownMenu alloc] initWithItems:@[@"精选地区", @"全部酒店类型"]];
+//    self.dropdownMenu = [[DropdownMenu alloc] initWithItems:@[@"全部地区1", @"全部酒店类型"]];
+    self.dropdownMenu = [[DropdownMenu alloc] init];
     self.dropdownMenu.delegate = self;
     [self.view addSubview:self.dropdownMenu];
     [self.view addSubview:self.tableView];
@@ -286,8 +287,8 @@
     [HTTPTool POST:url parameters:nil success:^(HTTPResult *result) {
         Log(@"%@",result.data);
         if (result.success) {
-            NSMutableArray *areas = [NSMutableArray array];
-            NSMutableArray *types = [NSMutableArray array];
+            NSMutableArray <Option *>*areas = [NSMutableArray array];
+            NSMutableArray <Option *>*types = [NSMutableArray array];
             
             for (id number in result.data[@"sh_area_order"]) {
                 [result.data[@"sh_area"] enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
@@ -309,9 +310,11 @@
             NSSortDescriptor *countasc = [NSSortDescriptor sortDescriptorWithKey:@"value" ascending:YES];
             //按顺序添加排序描述器
             NSArray *ascs = [NSArray arrayWithObjects:countasc,nil];
-            
+
+    
             self.dropdownMenu.areas = areas;
-            self.dropdownMenu.types = [types sortedArrayUsingDescriptors:ascs];;
+            self.dropdownMenu.types = [types sortedArrayUsingDescriptors:ascs];
+            self.dropdownMenu.items = @[[areas firstObject].title, [[self.dropdownMenu.types firstObject] title]];
         }
     } failure:^(NSError *error) {
         

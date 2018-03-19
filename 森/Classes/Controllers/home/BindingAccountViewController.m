@@ -104,6 +104,7 @@
     if ([self.accountTypeItem.value isEqualToString:@"1"]) {
         // 1、支付宝
         parameters[@"alipay"] = self.alipay;
+        parameters[@"zjb_name"] = self.alipayName;
     } else {
         parameters[@"bank_name"] = self.bankItem.value;
         parameters[@"bank_user"] = self.userNameItem.value;
@@ -335,7 +336,7 @@
             weakSelf.rightButtonItem.enabled = [weakSelf.alipayName length] && [weakSelf.alipay length];
         };
         
-        TextFieldItem *alipayName = [TextFieldItem itemWithTitle:@"姓名" placeholder:@"支付宝姓名（必填）" required:YES];
+        TextFieldItem *alipayName = [TextFieldItem itemWithTitle:@"姓名" placeholder:@"你的姓名（必填）" required:YES];
         alipayName.textAlignment = NSTextAlignmentRight;
         alipayName.valueDidChange = ^(id value){
             weakSelf.alipayName = value;
