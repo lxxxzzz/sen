@@ -174,15 +174,22 @@
 //                weakself.accountItem.title = @"银行卡";
 //                weakself.accountItem.value = result.data[@"my_account"][@"bank_account"];
             } else {
-                BaseItem *accountItem = [BaseItem itemWithTitle:@"支付宝" value:result.data[@"my_account"][@"alipay"] required:NO];
-                accountItem.textAlignment = NSTextAlignmentRight;
-                weakself.group1.items = @[accountItem];
-                
+
                 [User sharedUser].bank_account = nil;
                 [User sharedUser].bank_name = nil;
                 [User sharedUser].bank_user = nil;
-                [User sharedUser].alipay_account = accountItem.value;
+                [User sharedUser].alipay_account = result.data[@"my_account"][@"alipay"];
                 [User sharedUser].zfb_name = result.data[@"my_account"][@"zfb_name"];
+                
+                NSString *aliAccount = nil;
+                
+                if ([User sharedUser].alipay_account.length) {
+                    aliAccount = [NSString stringWithFormat:@"%@(%@)", [User sharedUser].alipay_account, [User sharedUser].zfb_name];
+                }
+                
+                BaseItem *accountItem = [BaseItem itemWithTitle:@"支付宝" value:aliAccount required:NO];
+                accountItem.textAlignment = NSTextAlignmentRight;
+                weakself.group1.items = @[accountItem];
 //                weakself.accountItem.title = @"支付宝";
 //                weakself.accountItem.value = result.data[@"my_account"][@"alipay"];
             }
