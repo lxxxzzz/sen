@@ -23,6 +23,9 @@
 #import "DrawerViewController.h"
 #import "UserViewController.h"
 
+#import "NavigationViewController.h"
+#import "EasterEggViewController.h"
+
 @interface LoginViewController () <MZTimerLabelDelegate> {
     NSString *_captcha;
 }
@@ -115,6 +118,11 @@
         // 提供者账号
         self.loginBtn.enabled = self.phoneNumberText.hasText && self.captchaText.hasText;
     }
+}
+
+- (void)tapAction:(UITapGestureRecognizer *)tap {
+    NavigationViewController *nav = [[NavigationViewController alloc] initWithRootViewController:[[EasterEggViewController alloc] init]];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)closeVc {
@@ -507,6 +515,14 @@
     if (_iconImage == nil) {
         _iconImage = [[UIImageView alloc] init];
         _iconImage.image = IMAGE(@"login_icon");
+        
+        _iconImage.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc]initWithTarget:self     action:@selector(tapAction:)];
+        //轻拍次数
+        tap.numberOfTapsRequired = 4;
+        //轻拍手指个数
+        tap.numberOfTouchesRequired = 1;
+        [_iconImage addGestureRecognizer:tap];
     }
     return _iconImage;
 }
