@@ -329,7 +329,7 @@
 
 - (void)loadAllData {
     __weak typeof(self) weakself = self;
-    NSString *url = [NSString stringWithFormat:@"%@?m=app&c=user&f=mainList&debug=1", HOST];
+    NSString *url = [NSString stringWithFormat:@"%@?m=app&c=user&f=mainList", HOST];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"list_type"] = @"1";
     [SVProgressHUD showWithStatus:@"加载中..."];

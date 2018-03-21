@@ -12,3 +12,6 @@ NSString *const kURLKey                                             = @"kURLKey"
 NSNotificationName const kUserDidLogoutNotification = @"kUserDidLogoutNotification";
 NSNotificationName const kUserDidLoginNotification = @"kUserDidLoginNotification";
 
+
+NSString *const kSignKey   = @"51sen";
+

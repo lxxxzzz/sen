@@ -52,7 +52,7 @@
 #define RELEASE_HOST @"http://app.51isen.com/index.php"
 
 #define strongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
-#define weakObj(o) try{}@finally{} __weak typeof(o) o##Weak = o;
+#define weakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
 
 UIKIT_EXTERN NSString *const kRootViewControllerKey;
 UIKIT_EXTERN NSString *const kRootViewControllerTigong;
@@ -68,5 +68,7 @@ UIKIT_EXTERN NSNotificationName const kUserDidLogoutNotification;
 UIKIT_EXTERN NSNotificationName const kUserDidLoginNotification;
 
 UIKIT_EXTERN NSString *const kURLKey;
+
+UIKIT_EXTERN NSString *const kSignKey;
 
 

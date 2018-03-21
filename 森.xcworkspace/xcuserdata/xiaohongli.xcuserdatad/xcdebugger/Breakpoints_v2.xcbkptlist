@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543142415.4825161"
+            timestampString = "543293282.352672"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "372"
@@ -244,7 +244,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543142415.483102"
+            timestampString = "543293282.35291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "370"
@@ -260,7 +260,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543142415.483362"
+            timestampString = "543293282.352981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "338"
@@ -372,61 +372,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Tools/HTTPTool.m"
-            timestampString = "543142415.4837151"
+            timestampString = "543293282.3531311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "+POST:parameters:success:failure:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x68ee;/Classes/Tools/HTTPTool.m"
-            timestampString = "543142415.483779"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "+GET:parameters:success:failure:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[HTTPTool GET:parameters:success:failure:]"
-                  moduleName = "&#x68ee;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Tools/HTTPTool.m"
-                  timestampString = "543142415.60799"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "1643">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__43+[HTTPTool GET:parameters:success:failure:]_block_invoke"
-                  moduleName = "&#x68ee;"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Tools/HTTPTool.m"
-                  timestampString = "543142415.610482"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "69">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -436,11 +388,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Tools/HTTPTool.m"
-            timestampString = "543142415.483833"
+            timestampString = "543293282.353211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "+POST:parameters:success:failure:"
             landmarkType = "7">
             <Locations>
@@ -452,12 +404,12 @@
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Tools/HTTPTool.m"
-                  timestampString = "543138100.1729"
+                  timestampString = "543292850.725982"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "2820">
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1180">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -467,12 +419,12 @@
                   moduleName = "&#x68ee;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Tools/HTTPTool.m"
-                  timestampString = "543138100.1750931"
+                  timestampString = "543292850.728171"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "69">
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "88">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -484,7 +436,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543142415.483887"
+            timestampString = "543293282.353269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "340"
@@ -500,7 +452,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543142415.4841371"
+            timestampString = "543293282.35332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "433"
@@ -516,7 +468,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x68ee;/Classes/Controllers/home/HotelListViewController.m"
-            timestampString = "543142415.484409"
+            timestampString = "543293282.353369"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "339"
@@ -683,6 +635,118 @@
             endingLineNumber = "60"
             landmarkName = "-viewWillDisappear:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Tools/HTTPTool.m"
+            timestampString = "543293282.353518"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "+GET:parameters:success:failure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[HTTPTool GET:parameters:success:failure:]"
+                  moduleName = "&#x68ee;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Tools/HTTPTool.m"
+                  timestampString = "543292231.366791"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1584">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43+[HTTPTool GET:parameters:success:failure:]_block_invoke"
+                  moduleName = "&#x68ee;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Tools/HTTPTool.m"
+                  timestampString = "543292231.368477"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Tools/HTTPTool.m"
+            timestampString = "543293282.353579"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "+POST:parameters:success:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x68ee;/Classes/Controllers/home/LoginViewController.m"
+            timestampString = "543293282.35364"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "-networkCaptcha"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LoginViewController networkCaptcha]"
+                  moduleName = "&#x68ee;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Controllers/home/LoginViewController.m"
+                  timestampString = "543291619.516415"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__37-[LoginViewController networkCaptcha]_block_invoke"
+                  moduleName = "&#x68ee;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaohongli/Documents/sen/%E6%A3%AE/Classes/Controllers/home/LoginViewController.m"
+                  timestampString = "543291619.518491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -122,17 +122,20 @@
 }
 
 - (void)getCaptcha {
-    // 焦点自动切到验证码输入框
-    [self.captchaText becomeFirstResponder];
-    
     NSString *error = [self checkPhoneNumber];
     if (error) {
         [SVProgressHUD showErrorWithStatus:error];
         return;
     }
     
-    MZTimerLabel *timerLabel = [[MZTimerLabel alloc] initWithTimerType:MZTimerLabelTypeTimer];
+    // 焦点自动切到验证码输入框
+    [self.captchaText becomeFirstResponder];
     
+    [self networkCaptcha];
+}
+
+- (void)captchaStart {
+    MZTimerLabel *timerLabel = [[MZTimerLabel alloc] initWithTimerType:MZTimerLabelTypeTimer];
     timerLabel.frame = self.getCaptchaBtn.bounds;
     timerLabel.timeFormat = @"ss秒";//倒计时格式,也可以是@"HH:mm:ss SS"，时，分，秒，毫秒；想用哪个就写哪个
     timerLabel.timeLabel.textColor = HEX(@"#C7C7CC");
@@ -145,8 +148,6 @@
     [self.getCaptchaBtn setTitle:nil forState:UIControlStateNormal];
     [self.getCaptchaBtn addSubview:timerLabel];
     [self.getCaptchaBtn setUserInteractionEnabled:NO];
-    
-    [self networkCaptcha];
 }
 
 - (void)login {
@@ -187,10 +188,15 @@
 - (void)networkCaptcha {
     NSString *url = [NSString stringWithFormat:@"%@?m=app&c=user&f=getPhoneCode", HOST];
     NSDictionary *parameters = @{@"mobile" : self.phoneNumberText.text};
+    @weakObj(self)
     [HTTPTool POST:url parameters:parameters success:^(HTTPResult *result) {
         if (result.success) {
+            @strongObj(self)
             Log(@"短信验证码是%@",result.data[@"code"]);
             _captcha = [result.data[@"code"] stringValue];
+            
+            [self captchaStart];
+            
         } else {
             [SVProgressHUD showErrorWithStatus:result.message];
         }
